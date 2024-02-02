@@ -1,33 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Playfair+Display&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.pulsing {
+  animation-name: pulse;
+  animation-duration: 2s;
+  z-index: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes pulse {
+  0% {
+    transform: scale(0.55);
+  }
+  50% {
+    transform: scale(1);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.slide-in {
+  animation-name: slideUp;
+  animation-duration: 1s;
+  z-index: 0;
+  animation-timing-function: ease-in-out;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@keyframes slideUp {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.poppins {
+  font-family: "Poppins";
+}
+
+.open {
+  font-family: "Open Sans", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.fira {
+  font-family: "Fira Code", monospace;
 }
