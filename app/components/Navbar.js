@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="z-10 flex fixed w-full top-0 items-center justify-between flex-wrap bg-neutral-950 px-8 py-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28">
+      <nav className="z-20 flex fixed w-full top-0 items-center justify-between flex-wrap bg-neutral-950 px-8 py-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28">
         <div className="flex items-center justify-between just text-white mr-6">
           <Link href="/" onClick={scrollToTop}>
             <Image
@@ -114,12 +114,12 @@ function Navbar() {
       {menu && (
         <>
           <div
-            className="fixed md:hidden w-5/12 z-10 p-8 h-screen bg-gray-950/50 left-0 "
+            className="fixed md:hidden w-5/12 z-30 p-8 h-screen bg-gray-950/50 left-0 "
             onClick={() => {
               setMenu(!menu);
             }}
           ></div>
-          <div className="md:hidden z-10 px-4 py-4 fixed h-screen right-0 w-7/12 bg-gray-50">
+          <div className="md:hidden z-30 px-4 py-4 fixed h-screen right-0 w-7/12 bg-gray-50">
             <div className="flex items-center justify-start gap-4">
               <Link
                 href="/"
@@ -193,7 +193,7 @@ function Navbar() {
                         scrollToTop();
                         setMenu(!menu);
                       }}
-                      className="z-10 block mt-4 transition-all w-full ease-in-out text-center hover:bg-white/20 text-sm poppins font-semibold px-4 py-2 border-2 border-gray/50 rounded-md lg:inline-block lg:mt-0 text-gray-950 mr-4"
+                      className="z-30 block mt-4 transition-all w-full ease-in-out text-center hover:bg-white/20 text-sm poppins font-semibold px-4 py-2 border-2 border-gray/50 rounded-md lg:inline-block lg:mt-0 text-gray-950 mr-4"
                     >
                       Logare
                     </Link>
@@ -203,7 +203,7 @@ function Navbar() {
                         scrollToTop();
                         setMenu(!menu);
                       }}
-                      className="z-10 hover:shadow-lime-500  text-center hover:shadow-md transition-all ease-in-out block font-semibold poppins text-sm bg-lime-300 px-4 py-2 border-2 border-lime-300 rounded-md mt-4 lg:inline-block lg:mt-0 text-neutral-950"
+                      className="z-30 hover:shadow-lime-500  text-center hover:shadow-md transition-all ease-in-out block font-semibold poppins text-sm bg-lime-300 px-4 py-2 border-2 border-lime-300 rounded-md mt-4 lg:inline-block lg:mt-0 text-neutral-950"
                     >
                       Înscrie-te Acum
                     </Link>
