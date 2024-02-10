@@ -24,9 +24,13 @@ const Lesson = (props) => {
   useEffect(() => {
     if (choice === props.content[7]) {
       setCorect(true);
-    } else if (choice !== "") setWrong(true);
+      setWrong;
+    } else if (choice !== "") {
+      setWrong(true);
+      setCorect(false);
+    }
   }, [choice]);
-
+  console.log(corect, wrong);
   return (
     <div className="h-screen   px-8 bg-neutral-950 p-1 flex items-center justify-center poppins">
       <div className="bg-neutral-500/20 md:w-1/2 flex flex-col items-center justify-between rounded-md gap-24 md:gap-12 p-8 ">
@@ -146,31 +150,53 @@ const Lesson = (props) => {
                 className="slide-in bg-white/20 p-4 text-sm rounded-md hover:bg-lime-300 hover:text-white transition-all"
               >
                 {props.content[1]}
+                {choice === props.content[1] &&
+                corect === false &&
+                wrong === true
+                  ? "❌"
+                  : ""}
+                {choice === props.content[1] && corect === true ? "  ✅" : ""}
               </button>
               <button
                 onClick={() => setChoice(props.content[2])}
                 className="slide-in bg-white/20 p-4 text-sm rounded-md hover:bg-lime-300 hover:text-white transition-all"
               >
                 {props.content[2]}
+                {choice === props.content[2] && wrong === true ? "❌" : ""}
+                {choice === props.content[2] && corect === true ? "✅" : ""}
               </button>
               <button
                 onClick={() => setChoice(props.content[3])}
                 className="slide-in bg-white/20 p-4 text-sm rounded-md hover:bg-lime-300 hover:text-white transition-all"
               >
                 {props.content[3]}
+                {choice === props.content[3] && wrong === true ? "❌" : ""}
+                {choice === props.content[3] && corect === true ? "✅" : ""}
               </button>
               <button
                 onClick={() => setChoice(props.content[4])} // ✅
                 className="slide-in bg-white/20 p-4 text-sm rounded-md hover:bg-lime-300 hover:text-white transition-all"
               >
                 {props.content[4]}{" "}
-                {choice === props.content[4] && wrong ? "❌" : "✅"}
+                {choice === props.content[4] && wrong === true ? "❌" : ""}
+                {choice === props.content[4] && corect === true ? "✅" : ""}
               </button>
             </div>
           </div>
         )}
         {props.type === 5 && (
-          <div className="flex flex-col gap-4 text-white md:w-10/12 md:px-12"></div>
+          <div className="flex flex-col gap-4 text-white md:w-10/12 md:px-12">
+            <h4 className="slide-in text-2xl font-bold w-full text-lime-300">
+              <span className="inline-block underline underline-offset-2">
+                Definitie
+              </span>
+              {"   "}
+              {props.content[0]}
+            </h4>
+            <p className="slide-in bg-white/20 p-4 text-sm rounded-md ">
+              {props.content[1]}
+            </p>
+          </div>
         )}
         <button
           onClick={handleClick}

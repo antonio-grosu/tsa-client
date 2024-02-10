@@ -45,14 +45,23 @@ const lesson = {
         "Raspuns 1",
       ],
     },
+    {
+      key: 5,
+      type: 5,
+
+      content: [
+        "Titlul lectiei",
+        "Termeni grei, știu, dar cu o explicație mult mai simplă. Ei de fapt reprezintă operații simple de matematică, cum ar fi adunarea, scăderea, înmulțirea și împărțirea. În cazul operatorilor liniari, se adaugă și împărțirea cu rest.",
+      ],
+    },
   ],
-  noParts: 3,
+  noParts: 5,
 };
 function Bac4() {
   const [index, setIndex] = useState(0);
   return (
     <div>
-      <Lesson type={lesson.parts[3].type} content={lesson.parts[3].content} />
+      <Lesson type={lesson.parts[4].type} content={lesson.parts[4].content} />
     </div>
   );
 }
