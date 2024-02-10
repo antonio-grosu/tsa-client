@@ -1,7 +1,27 @@
+"use client";
+
 import Highlight from "../../Highlight";
 import Link from "next/link";
 import Exercise from "../../Exercise";
+import { useEffect, useState } from "react";
+
 function Bac1() {
+  const [playSound, setPlaySound] = useState(false);
+
+  const handleClick = () => {
+    setPlaySound(true);
+  };
+
+  useEffect(() => {
+    if (playSound) {
+      const audio = new Audio("/click.mp3");
+      audio.play();
+      audio.onendedc = () => {
+        setPlaySound(false);
+      };
+    }
+  }, [playSound]);
+
   return (
     <div className="w-full mx-auto bg-neutral-950 py-36 min-h-screen px-8 ">
       <h1 className="slide-inunderline underline-offset-4 text-4xl text-lime-300 font-bold text-center poppins">
@@ -190,6 +210,7 @@ function Bac1() {
           Explicație: X este mai mare decât 5 și mai mic sau egal cu 8.{" "}
         </h3>
         <Link
+          onClick={handleClick}
           href="/course/bac/2"
           className="text-gray-950 font-bold  rounded-md hover:scale-105 hover:shadow-lime-300/50 transition-all hover:shadow-md bg-lime-300 px-4 py-2 mx-auto"
         >
