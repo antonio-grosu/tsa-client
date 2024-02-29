@@ -35,19 +35,19 @@ function BacCourse() {
   useEffect(() => {
     const response = axios
       .get(
-        `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${localStorage.getItem(
-          "userId"
-        )}/${courseId}`
+        `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${userId}`
       )
       .then(() => {
         setOwns(true);
         setLoading(false);
-      })
-      .catch((err) => {
-        // activeaza true daca nu are cursul
-        setOwns(false);
-        setLoading(false);
       });
+    if (response.status === 404) {
+      setOwns(false);
+      setLoading(false);
+    } else if (response.status === 200) {
+      setOwns(true);
+      setLoading(false);
+    }
   }, []);
 
   const lessons = [
@@ -108,65 +108,66 @@ function BacCourse() {
   return (
     <>
       {loading && <Loading />}
-      {!loading && !noAcc && (
-        <div className="py-24 px-8 md:px-24 lg:px-36 xl:px-48 2xl:px-72 bg-neutral-950 text-white p-4 min-h-screen flex flex-col  justify-center items-center">
-          <h1 className="text-md bg-red-200/20 text-red-500 border-2 border-red-500 py-2 px-4 rounded-sm font-bold text-center">
-            Pentru a accesa cursul trebuie sa{" "}
-            <Link href="/login" className="underline underline-offset-1">
-              te loghezi
-            </Link>{" "}
-            /{" "}
-            <Link href="/signup" className="underline underline-offset-1">
-              creezi un cont
-            </Link>
-          </h1>
-          <div className="flex items-center poppins gap-8 justify-center mt-8 flex-col md:flex-row">
-            <div className="md:w-1/2 text-center md:text-left">
-              {" "}
-              <h1 className="text-3xl font-bold my-4 ">
+      {!loading ||
+        (!noAcc && (
+          <div className="py-24 px-8 md:px-24 lg:px-36 xl:px-48 2xl:px-72 bg-neutral-950 text-white p-4 min-h-screen flex flex-col  justify-center items-center">
+            <h1 className="text-md bg-red-200/20 text-red-500 border-2 border-red-500 py-2 px-4 rounded-sm font-bold text-center">
+              Pentru a accesa cursul trebuie sa{" "}
+              <Link href="/login" className="underline underline-offset-1">
+                te loghezi
+              </Link>{" "}
+              /{" "}
+              <Link href="/signup" className="underline underline-offset-1">
+                creezi un cont
+              </Link>
+            </h1>
+            <div className="flex items-center poppins gap-8 justify-center mt-8 flex-col md:flex-row">
+              <div className="md:w-1/2 text-center md:text-left">
                 {" "}
-                N-am chef de BAC. Ce fac?
-              </h1>
-              <div className=" p-1  md:hidden  rounded-md my-8  items-center justify-center poppins font-bold text-gray-950 text-xl">
+                <h1 className="text-3xl font-bold my-4 ">
+                  {" "}
+                  N-am chef de BAC. Ce fac?
+                </h1>
+                <div className=" p-1  md:hidden  rounded-md my-8  items-center justify-center poppins font-bold text-gray-950 text-xl">
+                  <Image
+                    width={500}
+                    height={500}
+                    alt="Course Logo"
+                    className="w-full"
+                    src="/bac.svg"
+                  />
+                </div>
+                <p className="text-sm mb-4">
+                  Acest curs te va ajuta sa intelegi notiunile de informatica
+                  invatate in liceu si sa te perfectionezi pentru a lua <br />{" "}
+                  <span className="font-bold"> nota 10 (zece)</span> la examenul
+                  de BAC!
+                </p>
+                <div>
+                  <p className="text-sm mb-4 inline-block mr-2">
+                    Created 12.01.2024
+                  </p>
+                  <p className="text-sm mb-4 inline-block">
+                    by{" "}
+                    <Link className="text-lime-300" href="/">
+                      The Software Academy
+                    </Link>
+                  </p>
+                </div>
+              </div>
+              <div className=" p-1  md:w-2/12  rounded-md hidden md:flex items-center justify-center poppins font-bold text-gray-950 text-xl">
                 <Image
+                  alt="Course Logo"
                   width={500}
                   height={500}
-                  alt="Course Logo"
                   className="w-full"
                   src="/bac.svg"
                 />
               </div>
-              <p className="text-sm mb-4">
-                Acest curs te va ajuta sa intelegi notiunile de informatica
-                invatate in liceu si sa te perfectionezi pentru a lua <br />{" "}
-                <span className="font-bold"> nota 10 (zece)</span> la examenul
-                de BAC!
-              </p>
-              <div>
-                <p className="text-sm mb-4 inline-block mr-2">
-                  Created 12.01.2024
-                </p>
-                <p className="text-sm mb-4 inline-block">
-                  by{" "}
-                  <Link className="text-lime-300" href="/">
-                    The Software Academy
-                  </Link>
-                </p>
-              </div>
-            </div>
-            <div className=" p-1  md:w-2/12  rounded-md hidden md:flex items-center justify-center poppins font-bold text-gray-950 text-xl">
-              <Image
-                alt="Course Logo"
-                width={500}
-                height={500}
-                className="w-full"
-                src="/bac.svg"
-              />
             </div>
           </div>
-        </div>
-      )}
-      {!loading && !noAcc && (
+        ))}
+      {!loading && (
         <div className="py-24 px-8 md:px-24 lg:px-36 xl:px-48 2xl:px-72 bg-neutral-950 text-white p-4 min-h-screen flex flex-col  justify-center gap-24 items-center">
           <div className="flex items-center slide-in poppins gap-8 justify-center mt-24 flex-col md:flex-row">
             <div className="md:w-1/2 text-center md:text-left">
