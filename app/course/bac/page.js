@@ -35,7 +35,7 @@ function BacCourse() {
   useEffect(() => {
     const response = axios
       .get(
-        `https://walrus-app-wcxde.ondigitalocean.app/owns/${localStorage.getItem(
+        `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${localStorage.getItem(
           "userId"
         )}/${courseId}`
       )
@@ -108,7 +108,7 @@ function BacCourse() {
   return (
     <>
       {loading && <Loading />}
-      {!loading && noAcc && (
+      {!loading && !noAcc && (
         <div className="py-24 px-8 md:px-24 lg:px-36 xl:px-48 2xl:px-72 bg-neutral-950 text-white p-4 min-h-screen flex flex-col  justify-center items-center">
           <h1 className="text-md bg-red-200/20 text-red-500 border-2 border-red-500 py-2 px-4 rounded-sm font-bold text-center">
             Pentru a accesa cursul trebuie sa{" "}
