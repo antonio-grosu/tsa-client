@@ -20,7 +20,9 @@ function PreOrder() {
   useEffect(() => {
     setLoading(true);
     const id = localStorage.getItem("userId");
-    setUserId(id);
+    if (id !== null) {
+      setUserId(id);
+    } else setUserId(null);
   }, []);
 
   useEffect(() => {
@@ -33,9 +35,7 @@ function PreOrder() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://walrus-app-wcxde.ondigitalocean.app/owns/${localStorage.getItem(
-            "userId"
-          )}/${courseId}`
+          `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${userId}`
         );
         setOwns(true);
         setLoading(false);

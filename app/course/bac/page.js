@@ -37,17 +37,17 @@ function BacCourse() {
       .get(
         `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${userId}`
       )
-      .then(() => {
-        setOwns(true);
-        setLoading(false);
-      });
-    if (response.status === 404) {
-      setOwns(false);
-      setLoading(false);
-    } else if (response.status === 200) {
-      setOwns(true);
-      setLoading(false);
-    }
+      .then((response) =>
+        /*{
+        if (response.status === 404) {
+          setOwns(false);
+          setLoading(false);
+        } else if (response.status === 200) {
+          setOwns(true);
+          setLoading(false);
+        }
+      }*/ console.log(response)
+      );
   }, []);
 
   const lessons = [

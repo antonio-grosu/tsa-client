@@ -30,7 +30,9 @@ function FeCourse() {
 
   useEffect(() => {
     const response = axios
-      .get(`http://localhost:8081/owns/${courseId}/1`)
+      .get(
+        `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${userId}`
+      )
       .then(() => {
         setOwns(true);
         setLoading(false);
