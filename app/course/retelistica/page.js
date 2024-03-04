@@ -9,7 +9,7 @@ import ComingSoon from "@/app/components/ComingSoon";
 function RetelisticaCourse() {
   const [loading, setLoading] = useState(false);
   const [owns, setOwns] = useState(false);
-  const [userId, setUserId] = useState("");
+  const [userId, setUserId] = useState(0);
   const [noAcc, setNoAcc] = useState(true);
   const courseId = 1;
   const price = 25;
@@ -30,18 +30,19 @@ function RetelisticaCourse() {
   }, [userId]);
 
   useEffect(() => {
-    const response = axios
-      .get(
-        `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${userId}`
-      )
-      .then(() => {
-        setOwns(true);
-        setLoading(false);
-      })
-      .catch((err) => {
-        setOwns(false);
-        setLoading(false);
-      });
+    const response = axios.get(
+      `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${localStorage.getItem(
+        "userId"
+      )}`
+    );
+    if (response.status === 200) {
+      setOwns(true);
+      setLoading(false);
+    } else {
+      setOwns(false);
+      setLoading(false);
+      console.log("error");
+    }
   }, [owns]);
 
   const lessons = [

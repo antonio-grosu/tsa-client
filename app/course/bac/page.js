@@ -35,10 +35,11 @@ function BacCourse() {
   useEffect(() => {
     const response = axios
       .get(
-        `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${userId}`
+        `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${localStorage.getItem(
+          "userId"
+        )}`
       )
-      .then((response) =>
-        /*{
+      .then((response) => {
         if (response.status === 404) {
           setOwns(false);
           setLoading(false);
@@ -46,8 +47,7 @@ function BacCourse() {
           setOwns(true);
           setLoading(false);
         }
-      }*/ console.log(response)
-      );
+      });
   }, []);
 
   const lessons = [

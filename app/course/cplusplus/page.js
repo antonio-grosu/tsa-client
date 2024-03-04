@@ -32,7 +32,9 @@ function Cplusplus() {
   useEffect(() => {
     const response = axios
       .get(
-        `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${userId}`
+        `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${localStorage.getItem(
+          "userId"
+        )}`
       )
       .then(() => {
         setOwns(true);

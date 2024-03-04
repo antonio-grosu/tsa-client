@@ -35,7 +35,9 @@ function PreOrder() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${userId}`
+          `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${localStorage.getItem(
+            "userId"
+          )}`
         );
         setOwns(true);
         setLoading(false);

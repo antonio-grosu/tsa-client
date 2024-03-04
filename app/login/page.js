@@ -32,7 +32,7 @@ const Login = () => {
       localStorage.setItem("userName", response.data.user.userName);
       localStorage.setItem("firstName", response.data.user.firstName);
       localStorage.setItem("lastName", response.data.user.lastName);
-      localStorage.setItem("level", response.data.user.level);
+      localStorage.setItem("xp", response.data.user.xp);
 
       // redirect to home page
       window.location.href = "/";

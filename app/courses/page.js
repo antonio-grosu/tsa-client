@@ -331,9 +331,9 @@ const Bundle = () => {
   useEffect(() => {
     const response = axios
       .get(
-        `https://walrus-app-wcxde.ondigitalocean.app/owns/${localStorage.getItem(
+        `https://walrus-app-wcxde.ondigitalocean.app/ownedbies/${courseId}/${localStorage.getItem(
           "userId"
-        )}/${courseId}`
+        )}`
       )
       .then(() => {
         setOwns(true);

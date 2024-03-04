@@ -9,14 +9,14 @@ function Profile() {
     email: "",
     firstName: "",
     lastName: "",
-    level: "",
+    xp: "",
   });
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setUser({
       userName: localStorage.getItem("userName"),
-      level: localStorage.getItem("level"),
+      xp: localStorage.getItem("xp"),
       firstName: localStorage.getItem("firstName"),
       lastName: localStorage.getItem("lastName"),
       email: localStorage.getItem("email"),
@@ -26,7 +26,7 @@ function Profile() {
   if (
     user.email &&
     user.userName &&
-    user.level &&
+    user.xp &&
     user.firstName &&
     user.lastName
   ) {
