@@ -48,7 +48,7 @@ function Profile() {
           >
             Deconectare
             <svg
-              className="w-4 h-4 inline-block text-gray-800 ml-2  dark:text-red-400"
+              className="w-4 h-4 inline-block text-red-400"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -63,7 +63,7 @@ function Profile() {
           <div className="mb-8 ">
             <h3 className="text-lg  font-medium w-full flex items-center justify-center gap-1 text-center">
               <svg
-                className="inline-block w-4 h-4 text-gray-800 dark:text-lime-300"
+                className="inline-block w-4 h-4 text-lime-300"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"

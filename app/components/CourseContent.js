@@ -13,7 +13,7 @@ function CourseContent(props) {
         </h1>
         {!shown && (
           <svg
-            className="w-8 h-8 text-gray-800 dark:text-white inline-block cursor-pointer ml-4 p-2 bg-neutral-700/50 rounded-md"
+            className="w-8 h-8 text-white inline-block cursor-pointer ml-4 p-2 bg-neutral-700/50 rounded-md"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -25,7 +25,7 @@ function CourseContent(props) {
         )}
         {shown && (
           <svg
-            className="w-8 h-8 text-gray-800 dark:text-white cursor-pointer p-2 bg-neutral-700 rounded-md"
+            className="w-8 h-8 text-white cursor-pointer p-2 bg-neutral-700 rounded-md"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -59,7 +59,7 @@ function CourseContent(props) {
                 >
                   {!lesson.link && (
                     <svg
-                      className="w-4 h-4 text-gray-800 dark:text-gray-500 inline-block mr-1"
+                      className="w-4 h-4 text-gray-500 inline-block mr-1"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -93,7 +93,7 @@ function CourseContent(props) {
                 >
                   {!lesson.link && (
                     <svg
-                      className="w-4 h-4 text-gray-800 dark:text-gray-500 inline-block mr-1"
+                      className="w-4 h-4 text-gray-500 inline-block mr-1"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -127,7 +127,7 @@ function CourseContent(props) {
                 >
                   {!lesson.link && (
                     <svg
-                      className="w-4 h-4 text-gray-800 dark:text-gray-500 inline-block mr-1"
+                      className="w-4 h-4 text-gray-500 inline-block mr-1"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"

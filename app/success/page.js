@@ -23,7 +23,7 @@ function Success() {
           className="poppins px-12 md:inline-block hidden py-2 font-bold rounded-sm  text-sm bg-lime-300 text-gray-950 "
         >
           <svg
-            className="w-4 h-4 text-gray-800 dark:text-gray-950 inline-block"
+            className="w-4 h-4 text-gray-950 inline-block"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -42,7 +42,7 @@ function Success() {
         className="poppins px-12 py-2 font-bold md:hidden rounded-sm flex items-center justify-center mt-4  text-sm bg-lime-300 text-gray-950 "
       >
         <svg
-          className="w-4 h-4 text-gray-800 dark:text-gray-950 inline-block"
+          className="w-4 h-4 text-gray-950 inline-block"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"

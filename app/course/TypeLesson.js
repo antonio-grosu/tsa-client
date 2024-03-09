@@ -225,15 +225,34 @@ const TypeLesson = (props) => {
           )}
           {!finished && parts[newIndex] && parts[newIndex].type === 3 && (
             <div className="flex flex-col md:flex-row gap-4   items-center text-white md:w-10/12 md:px-12">
-              <Image
-                className="w-7/12 md:w-4/12 mx-auto"
-                src={parts[newIndex].content[0]}
-                width={300}
-                height={300}
-              />
-              <p className="slide-in bg-white/20 p-4 text-xs rounded-md ">
-                {parts[newIndex].content[1]}
-              </p>
+              {!parts[newIndex].code && (
+                <>
+                  <Image
+                    className="w-7/12 md:w-4/12 mx-auto"
+                    src={parts[newIndex].content[0]}
+                    width={300}
+                    height={300}
+                  />
+                  <p className="slide-in bg-white/20 p-4 text-xs rounded-md ">
+                    {parts[newIndex].content[1]}
+                  </p>
+                </>
+              )}
+              {parts[newIndex].code && (
+                <>
+                  <div className="w-full ">
+                    <p className="block slide-in text-center  p-4 text-md font-bold rounded-md">
+                      {parts[newIndex].content[1]}
+                    </p>
+                    <Image
+                      className="w-full mx-auto"
+                      src={parts[newIndex].content[0]}
+                      width={300}
+                      height={300}
+                    />
+                  </div>
+                </>
+              )}
             </div>
           )}
           {!finished && parts[newIndex] && parts[newIndex].type === 4 && (
@@ -308,9 +327,11 @@ const TypeLesson = (props) => {
           {!finished && parts[newIndex] && parts[newIndex].type === 5 && (
             <div className="flex flex-col gap-4 text-white md:w-10/12 md:px-12">
               <h4 className="slide-in text-2xl font-bold w-full text-lime-300">
-                <span className="inline-block underline underline-offset-2">
-                  Definitie
-                </span>
+                {parts[newIndex].def && (
+                  <span className="inline-block underline underline-offset-2">
+                    Definitie
+                  </span>
+                )}
                 {"   "}
                 {parts[newIndex].content[0]}
               </h4>

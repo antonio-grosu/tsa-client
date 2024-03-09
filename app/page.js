@@ -22,7 +22,7 @@ const Hero = () => {
           className="hidden md:inline-flex items-center justify-center hover:shadow-lime-500 hover:shadow-md transition-all transition-ease-in-out px-4 py-2 rounded-md font-semibold poppins text-neutral-950 bg-lime-300"
         >
           <svg
-            className="w-6 inline-block h-6 text-gray-800 dark:text-gray-950"
+            className="w-6 inline-block h-6 text-gray-950"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -101,7 +101,7 @@ const Hero = () => {
         className="md:hidden flex w-full mt-8 items-center justify-center hover:shadow-lime-500 hover:shadow-md transition-all transition-ease-in-out px-4 py-2 rounded-md font-semibold poppins text-neutral-950 bg-lime-300"
       >
         <svg
-          className="w-6 inline-block h-6 text-gray-800 dark:text-gray-950"
+          className="w-6 inline-block h-6 text-gray-950"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
@@ -229,7 +229,7 @@ const Product = () => {
             className="hidden md:inline-block bg-lime-300  hover:shadow-lime-500 hover:shadow-md hover:scale-105 transition-all transition-ease-in-out text-neutral-950 font-bold py-2 px-4 rounded"
           >
             <svg
-              className="w-4 h-4 text-neutral-950 dark:text-neutral-950 mr-2 inline-block"
+              className="w-4 h-4 text-neutral-950 text-neutral-950 mr-2 inline-block"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -254,7 +254,7 @@ const Product = () => {
           className="w-full text-center mt-8 md:hidden bg-lime-300  hover:shadow-lime-500 hover:shadow-md hover:scale-105 transition-all transition-ease-in-out text-neutral-950 font-bold py-2 px-4 rounded"
         >
           <svg
-            className="w-4 h-4 text-neutral-950 dark:text-neutral-950 mr-2 inline-block"
+            className="w-4 h-4 text-neutral-950 text-neutral-950 mr-2 inline-block"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -291,7 +291,7 @@ const Product = () => {
               className="hidden md:inline-block bg-lime-300 cursor-progress hover:shadow-lime-500 hover:shadow-md hover:scale-105 transition-all transition-ease-in-out text-neutral-950 font-bold py-2 px-4 rounded"
             >
               <svg
-                className="w-4 h-4 mr-2 inline-block text-gray-800 dark:text-neutral-950"
+                className="w-4 h-4 mr-2 inline-block text-gray-800 text-neutral-950"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -322,7 +322,7 @@ const Product = () => {
               className="md:hidden  bg-lime-300 cursor-progress hover:shadow-lime-500 hover:shadow-md hover:scale-105 transition-all transition-ease-in-out text-neutral-950 font-bold py-2 px-4 rounded"
             >
               <svg
-                className="w-4 h-4 mr-2 inline-block text-gray-800 dark:text-neutral-950"
+                className="w-4 h-4 mr-2 inline-block text-gray-800 text-neutral-950"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
