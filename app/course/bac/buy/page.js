@@ -104,7 +104,7 @@ function PreOrder() {
             {!owns && (
               <button
                 onClick={() => handlePayment()}
-                className=" slide-in px-8 xhidden md:block  py-2 text-neutral-950  font-bold  text-lg rounded-md  mt-8 bg-lime-300"
+                className=" slide-in px-8 hidden md:block  py-2 text-neutral-950  font-bold  text-lg rounded-md  mt-8 bg-lime-300"
               >
                 {" "}
                 Cumpără Acum - 12.49 Ron
