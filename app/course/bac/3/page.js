@@ -165,7 +165,7 @@ function Bac3() {
     //   </div>
     // </div>
     <TypeLesson
-      title="Backtracking"
+      title="C++ Variabile & Operatori"
       next="buy"
       course="N-am chef de BAC, ce fac?"
       parts={[

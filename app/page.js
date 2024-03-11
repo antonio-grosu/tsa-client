@@ -212,7 +212,7 @@ const Presentation = () => {
 // Componenta pentru secțiunea "Product"
 const Product = () => {
   return (
-    <div className="bg-white items-center flex flex-col justify-center px-8 py-12 md:px-24 lg:px-36 xl:px-48 2xl:px-72 ">
+    <div className="border-b-2 border-black/10 bg-white items-center flex flex-col justify-center px-8 py-12 md:px-24 lg:px-36 xl:px-48 2xl:px-72 ">
       <div className="w-full flex items-center justify-between md:flex-row flex-col">
         <div className="md:w-5/12 poppins text-neutral-950">
           <h1 className="font-semibold text-3xl">
@@ -229,7 +229,7 @@ const Product = () => {
             className="hidden md:inline-block bg-lime-300  hover:shadow-lime-500 hover:shadow-md hover:scale-105 transition-all transition-ease-in-out text-neutral-950 font-bold py-2 px-4 rounded"
           >
             <svg
-              className="w-4 h-4 text-neutral-950 text-neutral-950 mr-2 inline-block"
+              className="w-4 h-4  text-neutral-950 mr-2 inline-block"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -350,7 +350,7 @@ const Home = () => {
     <>
       <Hero />
       <Product />
-      <Presentation />
+      {/* <Presentation /> */}
     </>
   );
 };
