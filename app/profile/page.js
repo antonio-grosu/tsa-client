@@ -32,31 +32,13 @@ function Profile() {
   ) {
     return (
       <div className="py-28 px-8 md:px-24 lg:px-36 xl:px-48 2xl:px-72 md:flex-row flex-col bg-neutral-950 text-lime-300 p-4 min-h-screen flex  items-center  gap-8 justify-between">
-        <div className="flex-col flex items-center md:items-start gap-8 w-full mt-12 ">
-          <h1 className="text-4xl text-white font-bold ">
-            Hei,{" "}
-            <span className="text-lime-300 text-lg p-3 font-bold">
+        <div className="flex-col flex items-center justify-center md:items-start gap-8 w-full mt-12 ">
+          <div className="text-4xl text-white font-bold inline-block justify-center items-center flex flex-row">
+            Hei,
+            <span className="text-lime-300 text-4xl p-3 font-bold mr-5">
               {user.userName}
             </span>
-          </h1>
-          <button
-            className="px-8 py-2 border-2 border-red-500 bg-red-200/20 rounded-md text-red-400 poppins font-bold"
-            onClick={() => {
-              localStorage.clear();
-              window.location.reload();
-            }}
-          >
-            Deconectare
-            <svg
-              className="w-4 h-4 inline-block text-red-400"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              viewBox="0 0 20 18"
-            >
-              <path d="M6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Zm11-3h-6a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2Z" />
-            </svg>
-          </button>
+          </div>
         </div>
 
         <div className="w-full overflow-hidden mt-8 sm:rounded-lg poppins ">

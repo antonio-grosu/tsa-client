@@ -17,10 +17,16 @@ const TypeLesson = (props) => {
   const [wrong, setWrong] = useState(false);
   const [finished, setFinished] = useState(false);
 
-  const handleClick = () => {
+  const handleClickNext = () => {
     setNewIndex((prev) => prev + 1);
     setPlaySound(true);
   };
+
+  const handleClickBack = () => {
+    setNewIndex((prev) => prev - 1);
+    setPlaySound(true);
+  };
+
   useEffect(() => {
     if (finished) setPlayFinished(true);
   }, [finished]);
@@ -62,10 +68,10 @@ const TypeLesson = (props) => {
   return (
     <div>
       <div className="min-h-screen py-36 px-8 bg-neutral-950 p-1 flex items-center justify-center poppins">
-        <div className="bg-neutral-500/20 md:w-1/2 flex flex-col items-center justify-between rounded-md gap-12 md:gap-8 p-8 ">
+        <div className="bg-neutral-500/20 md:w-2/3 flex flex-col items-center justify-between rounded-md gap-12 md:gap-8 p-8 ">
           <div className="flex flex-col justify-start  w-full gap-4">
             <div className="flex items-center justify-start gap-6 text-white">
-              <div className="md:w-24 md:h-24 w-1/3">
+              {/*(<div className="md:w-24 md:h-24 w-1/3">
                 <Image
                   src="/bac.svg"
                   alt="BAC"
@@ -73,7 +79,7 @@ const TypeLesson = (props) => {
                   height={32}
                   className="w-full border-2"
                 />
-              </div>
+              </div>*/}
               <div>
                 <h3 className="md:text-2xl text-lime-300 font-bold z-0">
                   {title}
@@ -199,13 +205,13 @@ const TypeLesson = (props) => {
           )}
           {!finished && parts[newIndex] && parts[newIndex].type === 1 && (
             <div className="flex flex-col gap-4 text-white md:w-10/12 md:px-12">
-              <h4 className="slide-in text-xl font-bold text-center w-full text-lime-50">
+              <h4 className="slide-in text-2xl font-bold text-center w-full text-lime-50">
                 {parts[newIndex].content[0]}
               </h4>
-              <p className="slide-in bg-white/20 p-4 text-xs rounded-md ">
+              <p className="slide-in bg-white/30 p-5 text-sm rounded-md ">
                 {parts[newIndex].content[1]}
               </p>
-              <p className="slide-in bg-white/20 p-4 text-xs rounded-md ">
+              <p className="slide-in bg-white/30 p-5 text-sm rounded-md ">
                 {parts[newIndex].content[2]}
               </p>
             </div>
@@ -353,24 +359,96 @@ const TypeLesson = (props) => {
                 </button>
               )}
               {correct && !wrong && (
-                <button
-                  onClick={handleClick}
-                  className={
-                    "w-full md:w-1/2 bg-gradient-to-r from-sky-600 to-lime-300 font-bold text-lg py-2 rounded-full border-2 hover:border-lime-300 border-white text-white hover:scale-105 transition-all "
-                  }
-                >
-                  Urmatoarea Parte
-                </button>
+                <div className="md:w-full w-full md:mt-10">
+                  {/* butoanele de next si back*/}
+                  {/* button back de telefon */}
+                  {newIndex !== 0 && (
+                    <button
+                      onClick={handleClickBack}
+                      className={
+                        "md:invisible md:visible w-1/6 bg-gradient-to-r from-sky-600 to-lime-300 font-bold text-lg py-2 rounded-full border-2 hover:border-lime-300 border-white text-white hover:scale-105 transition-all float-left inline-block"
+                      }
+                    >
+                      {"<"}
+                    </button>
+                  )}
+                  {/* button back de calculator */}
+                  {newIndex !== 0 && (
+                    <button
+                      onClick={handleClickBack}
+                      className={
+                        "md:visible invisible w-1/6 bg-gradient-to-r from-sky-600 to-lime-300 font-bold text-lg py-2 rounded-full border-2 hover:border-lime-300 border-white text-white hover:scale-105 transition-all float-left inline-block"
+                      }
+                    >
+                      {"<"} Back
+                    </button>
+                  )}
+                  {/* button next de telefon */}
+                  <button
+                    onClick={handleClickNext}
+                    className={
+                      "visible md:invisible w-1/6 bg-gradient-to-r from-sky-600 to-lime-300 font-bold text-lg py-2 rounded-full border-2 hover:border-lime-300 border-white text-white hover:scale-105 transition-all float-right"
+                    }
+                  >
+                    {">"}
+                  </button>
+                  {/* button next de calculator */}
+                  <button
+                    onClick={handleClickNext}
+                    className={
+                      "md:visible invisible w-1/6 bg-gradient-to-r from-sky-600 to-lime-300 font-bold text-lg py-2 rounded-full border-2 hover:border-lime-300 border-white text-white hover:scale-105 transition-all float-right"
+                    }
+                  >
+                    Next {">"}
+                  </button>
+                </div>
               )}
             </>
           )}
           {!finished && parts[newIndex] && parts[newIndex].type !== 4 && (
-            <button
-              onClick={handleClick}
-              className="w-full md:w-1/2 bg-gradient-to-r from-sky-600 to-lime-300 font-bold text-lg py-2 rounded-full border-2 hover:border-lime-300 border-white text-white hover:scale-105 transition-all "
-            >
-              Urmatoarea Parte
-            </button>
+            <div className="md:w-full w-full md:mt-10">
+              {/* butoanele de next si back*/}
+              {/* button back de telefon */}
+              {newIndex !== 0 && (
+                <button
+                  onClick={handleClickBack}
+                  className={
+                    "md:invisible md:visible w-1/6 bg-gradient-to-r from-sky-600 to-lime-300 font-bold text-lg py-2 rounded-full border-2 hover:border-lime-300 border-white text-white hover:scale-105 transition-all float-left inline-block"
+                  }
+                >
+                  {"<"}
+                </button>
+              )}
+              {/* button back de calculator */}
+              {newIndex !== 0 && (
+                <button
+                  onClick={handleClickBack}
+                  className={
+                    "md:visible invisible w-1/6 bg-gradient-to-r from-sky-600 to-lime-300 font-bold text-lg py-2 rounded-full border-2 hover:border-lime-300 border-white text-white hover:scale-105 transition-all float-left inline-block"
+                  }
+                >
+                  {"<"} Back
+                </button>
+              )}
+              {/* button next de telefon */}
+              <button
+                onClick={handleClickNext}
+                className={
+                  "visible md:invisible w-1/6 bg-gradient-to-r from-sky-600 to-lime-300 font-bold text-lg py-2 rounded-full border-2 hover:border-lime-300 border-white text-white hover:scale-105 transition-all float-right"
+                }
+              >
+                {">"}
+              </button>
+              {/* button next de calculator */}
+              <button
+                onClick={handleClickNext}
+                className={
+                  "md:visible invisible w-1/6 bg-gradient-to-r from-sky-600 to-lime-300 font-bold text-lg py-2 rounded-full border-2 hover:border-lime-300 border-white text-white hover:scale-105 transition-all float-right"
+                }
+              >
+                Next {">"}
+              </button>
+            </div>
           )}
         </div>
       </div>

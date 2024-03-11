@@ -75,7 +75,7 @@ function Navbar() {
               <Link
                 href="/profile"
                 onClick={scrollToTop}
-                className="poppins px-4 inline-block py-2 bg-gray-50/20 hover:bg-gray-50/30 transition-all rounded-md text-white text-sm font-bold"
+                className="poppins px-4 border-2 inline-block py-2 bg-gray-50/20 hover:bg-gray-50/30 transition-all rounded-md text-white text-sm font-bold"
               >
                 <svg
                   className="w-4 h-4 inline-block mr-2 text-gray-800 dark:text-white"
@@ -88,6 +88,17 @@ function Navbar() {
                 </svg>
                 {userName}
               </Link>
+            )}
+            {userName && (
+              <button
+                className="px-8 py-2 border-2 border-red-500 bg-red-200/20 rounded-md text-red-400 poppins font-bold text-sm ml-4 transition-all ease-in-out hover:bg-red-200/50 hover:text-red-500 dark:hover:bg-red-500 dark:hover:text-red-200"
+                onClick={() => {
+                  localStorage.clear();
+                  window.location.reload();
+                }}
+              >
+                Log Out
+              </button>
             )}
           </div>
         </div>
