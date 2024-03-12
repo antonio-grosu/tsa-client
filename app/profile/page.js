@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import axios from "axios";
+import Image from "next/image";
 
 function Profile() {
   const [user, setUser] = useState({
@@ -42,7 +43,13 @@ function Profile() {
             </span>
           </div>
           {/* div poza */}
-          <div className="w-[40vh] h-[40vh] bg-lime-300">pula</div>
+          <Image
+            src="/achievements.svg"
+            alt="Achievements"
+            width={300}
+            height={300}
+          />
+          {/* div xp */}
         </div>
 
         <div className="w-full overflow-hidden sm:rounded-lg poppins ">
