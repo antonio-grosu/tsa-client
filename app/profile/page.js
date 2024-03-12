@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import axios from "axios";
 import Image from "next/image";
+import Level from "../Level";
 
 function Profile() {
   const [user, setUser] = useState({
@@ -35,12 +36,16 @@ function Profile() {
       <div className="py-36 px-8 md:px-24 lg:px-36 xl:px-48 2xl:px-72 flex-col bg-neutral-950 text-lime-300 p-4 h-duh flex items-center gap-8">
         {/* div profile calculator */}
         <div className="flex flex-row justify-center gap-8 w-full mt-12 justify-between">
-          {/* div hei <nume>*/}
-          <div className="text-4xl text-white font-bold justify-center items-center flex flex-row">
-            Hei,
-            <span className="text-lime-300 text-4xl p-3 font-bold mr-5">
-              {user.userName}
-            </span>
+          <div className="w-1/2 flex flex-col items-center justify-center">
+            {/* div hei <nume>*/}
+            <div className="text-4xl text-white font-bold justify-center items-center flex flex-row">
+              Hei,
+              <span className="text-lime-300 text-4xl p-3 font-bold mr-5">
+                {user.userName}
+              </span>
+            </div>
+            {/* div xp */}
+            {/**<Level />*/}
           </div>
           {/* div poza */}
           <Image
@@ -49,7 +54,6 @@ function Profile() {
             width={300}
             height={300}
           />
-          {/* div xp */}
         </div>
 
         <div className="w-full overflow-hidden sm:rounded-lg poppins ">
