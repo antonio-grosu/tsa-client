@@ -1,172 +1,74 @@
 "use client";
-
 import Highlight from "../../Highlight";
 import Link from "next/link";
 import TypeLesson from "../../TypeLesson";
 
-function Bac3() {
+function Bac2() {
   return (
-    // <div className="w-full mx-auto bg-neutral-950 py-36 min-h-screen px-8">
+    // <div className="w-full mx-auto bg-neutral-950 py-36  min-h-screen px-8">
     //   <h1 className="slide-in underline underline-offset-4 text-4xl text-lime-300 font-bold text-center poppins">
-    //     C++ Variabile și Operatori
+    //     Backtracking
     //   </h1>
-    //   <div className="slide-in flex flex-col poppins gap-16 items-start mx-auto mt-24 md:w-1/2">
-    //     <h3 className="text-2xl font-bold text-lime-300">
-    //       Nu prea ai cum să iei o notă bună la informatică fără să știi măcar un
-    //       fir de cod.
-    //     </h3>
+    //   <div className="slide-in flex flex-col poppins gap-8 items-start mx-auto mt-24 md:w-1/2">
     //     <p className="text-white text-sm">
-    //       E timpul să ne murdărim mâinile și de puțină programare. Programarea
-    //       este, pe scurt, instruirea unui robot, numit compilator, să facă ce îi
-    //       zicem noi. Cel cu care lucrăm noi vorbește strict în C++. Când
-    //       discutăm cu el, evident în limbajul lui, trebuie să îi oferim 3
-    //       lucruri, ca în orice dialog uman:
+    //       Hmm... Alt termen greu, dar de fapt extrem de simplu. Hai să ne aducem
+    //       aminte de clasa a II-a, când am avut un exercițiu de genul:
     //     </p>
-    //     <ol className="text-white gap-4 bg-lime-300/20 rounded-md p-8 w-full flex items-center justify-center ">
-    //       <div className="list-decimal flex items-start flex-col justify-start font-bold">
-    //         <li> Context</li>
-    //         <li> Valori</li>
-    //         <li> Acțiuni</li>
-    //       </div>
-    //     </ol>{" "}
+    //     <Highlight content="Scrieți toate numerele de 3 cifre distincte care se pot forma cu cifrele 2, 3 și 4." />
     //     <h3 className="text-2xl font-bold text-lime-300">
-    //       Sau mai concret: variabile, alături de declararea și citirea /
-    //       inițializarea acestora, cât și instrucțiunile / operațiile pe care
-    //       vrem să le facă robotul nostru.
+    //       Păi simplu: 234, 243, 324, 342, 423, 432.
     //     </h3>
+    //     <p className="text-white text-sm">Hmm... sunt crescătoare.</p>
+    //     <p className="text-white text-sm">Acum, din nou, dar cu alte reguli:</p>
+    //     <Highlight
+    //       content="Scrieți toate numerele de 5 cifre distincte care se pot forma cu cifrele 2, 3, 4, 5 și 6,
+    //         dar în care nu putem așeza cifrele pare una lângă alta."
+    //     />
+    //     <h3 className="text-2xl font-bold text-lime-300">
+    //       Un pic mai greu, dar tot simplu: 23456,{" "}
+    //       <span className="line-through">23645</span>,{" "}
+    //       <span className="line-through">23546</span>,{" "}
+    //       <span className="line-through">23564</span>, 23654, etc.
+    //     </h3>
+    //     <Highlight
+    //       content="Răspunsul final:
+    //       23456, 23654, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254,
+    //       63452, 65234 și 65432."
+    //     />
+    //     <h3 className="text-2xl font-bold text-lime-300">
+    //       Și acum, variantele de probleme întâlnite la bac:
+    //     </h3>
+    //     <Highlight
+    //       content="Avem trandafiri, lalele, azalee și orhidee.
+    //         Dacă nu putem avea lalele lângă orhidee, câte buchete de 3 flori putem face?"
+    //     />
+    //     <p className="text-white text-sm">Hai să le numerotăm:</p>
+    //     <Highlight
+    //       content=" trandafir = 1, lalea = 2, azalee = 3, orhidee =
+    //       4."
+    //     />
     //     <p className="text-white text-sm">
-    //       Variabilele sunt niște cutii în care putem pune orice, de la numere,
-    //       la litere, la cuvinte, la propoziții și nu în ultimul rând, valori de
-    //       adevăr.
-    //     </p>
-    //     <p className="text-white text-sm">
-    //       În declararea acestora, ele sunt de 3 feluri:
-    //     </p>
-    //     <h3 className="text-2xl font-bold text-lime-300">
-    //       1. Valori numerice, fie ele <br />
-    //     </h3>
-    //     <div className="flex items-start justify-start flex-col">
-    //       <p className="text-white text-sm">
-    //         <span className="font-bold text-lg">Intregi</span> și se declară cu{" "}
-    //         <span className="py-1 px-4 fira bg-lime-300/20 font-bold mx-2 rouneded-2xl code ">
-    //           int
-    //         </span>{" "}
-    //         <span className="py-1 px-4 fira bg-lime-300/20 font-bold mx-2 rouneded-2xl code ">
-    //           long long
-    //         </span>
-    //       </p>
-
-    //       <p className="text-white text-sm mt-6">
-    //         <span className="font-bold text-lg">Reale</span> și se declară cu și
-    //         se declară cu
-    //         <span className="py-1 fira  px-4 bg-lime-300/20 font-bold mx-2 rouneded-2xl code ">
-    //           float
-    //         </span>
-    //         sau
-    //         <span className="py-1  fira px-4 bg-lime-300/20 font-bold mx-2 rouneded-2xl code ">
-    //           double
-    //         </span>
-    //       </p>
-    //       <p className="text-white text-sm mt-6">
-    //         <span className="font-bold text-lg">Caractere</span> și se declară
-    //         cu
-    //         <span className="py-1 px-4 fira bg-lime-300/20 font-bold mx-2 rouneded-2xl code ">
-    //           char
-    //         </span>
-    //       </p>
-    //       <p className="text-white text-sm mt-6">
-    //         <span className="font-bold text-lg">Valori de Adevar</span> se
-    //         declară cu
-    //         <span className="py-1 px-4 fira bg-lime-300/20 font-bold mx-2 rouneded-2xl code ">
-    //           bool
-    //         </span>
-    //         și pot avea doar 2 valori, adevărat sau fals.
-    //       </p>
-    //     </div>
-    //     <h3 className="text-2xl font-bold text-lime-300">
-    //       OK, ok... Dar ce facem cu ele?
-    //     </h3>
-    //     <Highlight content="- Algoritmi?" />
-    //     <h3 className="text-2xl font-bold text-lime-300">
-    //       Da, algoritmi. Nu știi ce sunt algoritmii?"
-    //     </h3>
-    //     <p className="text-white text-sm">
-    //       Uite, hai să-ți dau un exemplu de algoritm:
-    //     </p>
-    //     <h3 className="text-2xl font-bold text-lime-300">
-    //       Când te speli pe dinți, ce faci?
-    //     </h3>
-    //     <div className="flex items-center justify-center w-full bg-lime-300/10 rounded-md">
-    //       <img src="/bac3Illustration.svg" className="w-5/12" />
-    //       <ol className="text-white text-sm flex flex-col items-start justify-start gap-2 font-bold">
-    //         <li>1. Deschizi robinetul</li>
-    //         <li>2. Umezești periuța</li>
-    //         <li>3. Aplici pastă de dinți</li>
-    //         <li>4. Te speli pe dinți</li>
-    //         <li>5. Te clătești</li>
-    //         <li>6. Clătești periuța</li>
-    //         <li>7. Închizi robinetul</li>
-    //       </ol>
-    //     </div>
-    //     <Highlight content="- Da, dar ce legătură are asta cu programarea?" />
-    //     <p className="text-white text-sm">
-    //       Un algoritm este o secvență de instrucțiuni care rezolvă o problemă.
-    //     </p>
-    //     <h3 className="text-2xl font-bold text-lime-300">
-    //       În cazul nostru, problema era să ne spălăm pe dinți. Mai sunt 100 de
-    //       algoritmi pe care îi folosim zilnic, dar nu ne-am format vederea să îi
-    //       vedem așa.
-    //     </h3>
-    //     <p className="text-sm text-white">
-    //       Ia o mică pauză și gândește-te la alți algoritmi pe care îi folosești
-    //       uzual. Gata? Hai să continuăm.{" "}
+    //       Și avem ghivece cu 3 flori, adică numere de 3 cifre.
     //     </p>
     //     <p className="text-white text-sm">
-    //       Hai acum să vedem cum arată un algoritm în C++ și care sunt pașii pe
-    //       care trebuie să îi urmăm pentru a-l scrie.
+    //       Cu alte cuvinte, reformulând, avem numere de 3 cifre, în care nu putem
+    //       avea cifra 2 lângă cifra 4.
     //     </p>
-    //     <ol className="text-white gap-4 bg-lime-300/20 rounded-md p-8 w-full flex items-center justify-center ">
-    //       <div className="text-center flex items-start flex-col justify-start font-bold">
-    //         <li>1. Declarăm variabilele de care avem nevoie</li>
-    //         <li>2. Citim valorile de care avem nevoie</li>
-    //         <li>3. Rezolvăm problema</li>
-    //         <li>4. Afișăm rezultatul</li>
-    //       </div>
-    //     </ol>{" "}
-    //     <p className="text-white text-sm">Uite triviala sumă a 2 numere:</p>
-    //     <p className="text-whixte text-sm w-full p-4 rounded-md justify-center bg-lime-300/10 text-white fira">
-    //       <div className="w-10/12 mx-auto">
-    //         {" "}
-    //         {`#include <iostream>`} <br />
-    //         {`using namespace std; \n \t`} <br />
-    //         {`int main () { \n \t \t`} <br />
-    //         {`    int a, b, sum; // 1. Declarăm variabilele \n \t \t`} <br />
-    //         {`    cin >> a >> b; // 2. Citim valorile \n \t \t`} <br />
-    //         {`    sum = a + b; // 3. Rezolvăm problema \n \t \t`} <br />
-    //         {`    cout << sum; // 4. Afișăm rezultatul \n \t \t`} <br />
-    //         {`    return 0; \n \t`} <br />
-    //         {`}`}
-    //       </div>
-    //     </p>{" "}
     //     <h3 className="text-2xl font-bold text-lime-300">
-    //       Ne amintim din prima lecție și ce alte operații putem face cu
-    //       variabilele. Îți aduci aminte de adunare, scădere, înmulțire și
-    //       împărțire?
+    //       Din nou... simplu, nu?
     //     </h3>
-    //     <p className="text-white text-sm">
-    //       Așa cum erau folosite la exercițiul 1, așa se folosesc și aici.
-    //     </p>
+    //     <Highlight content="            132, 134, 142, 143, 231, 234, 241, 243, 314, 324, 341, 342, 413, 423, 431, 432." />
     //     <Link
-    //       href="/course/bac/buy"
-    //       className="text-gray-950 font-bold rounded-md  hover:scale-105 hover:shadow-lime-300/50 transition-all hover:shadow-md bg-lime-300 px-4 py-2 mx-auto"
+    //       href="/course/bac/3"
+    //       className="text-gray-950 font-bold rounded-md hover:scale-105 hover:shadow-lime-300/50 transition-all hover:shadow-md  bg-lime-300 px-4 py-2  mx-auto"
     //     >
-    //       Pasul Următor
+    //       Lecția următoare
     //     </Link>
     //   </div>
     // </div>
     <TypeLesson
-      title="C++ Variabile & Operatori"
-      next="buy"
+      title="Backtracking"
+      next="4"
       course="N-am chef de BAC, ce fac?"
       parts={[
         {
@@ -174,9 +76,9 @@ function Bac3() {
           type: 1,
 
           content: [
-            "Nu prea ai cum să iei o notă bună la informatică fără să știi măcar un fir de cod.            ",
-            "E timpul să ne murdărim mâinile și de puțină programare. Programarea este, pe scurt, instruirea unui robot, numit compilator, să facă ce îi zicem noi.",
-            "Cel cu care lucrăm noi vorbește strict în C++. ",
+            "Hmmm... Alt termen greu",
+            "Hmm... Alt termen greu, dar de fapt extrem de simplu. Hai să ne aducem aminte de clasa a II-a, când am avut un exercițiu de genul:       ",
+            "Scrieți toate numerele de 3 cifre distincte care se pot forma cu cifrele 2, 3 și 4.            ",
           ],
         },
         {
@@ -184,109 +86,55 @@ function Bac3() {
           type: 1,
 
           content: [
-            "Când discutăm cu el, evident în limbajul lui, trebuie să îi oferim 3 lucruri",
-            "La fel  ca în orice dialog uman:",
-            `Context,
-            Valori,
-            Acțiuni `,
+            "Păi simplu: 234, 243, 324, 342, 423, 432.",
+            "Hmm... sunt crescătoare.            ",
+            `Acum, din nou, dar cu alte reguli...            `,
           ],
         },
         {
           key: 2,
-          type: 5,
-          def: false,
+          type: 1,
           content: [
-            "Sau mai concret: variabile, alături de declararea și citirea / inițializarea acestora, cât și instrucțiunile / operațiile pe care vrem să le facă robotul nostru.",
-            "Variabilele sunt niște cutii în care putem pune orice, de la numere, la litere, la cuvinte, la propoziții și nu în ultimul rând, valori de adevăr.",
+            "Scrieți toate numerele de 5 cifre distincte care se pot forma cu cifrele 2, 3, 4, 5 și 6, dar în care nu putem așeza cifrele pare una lângă alta.",
+            " Variante corecte : 23456,23654",
+            "Dar nu : 23645, 23546, 23564",
           ],
         },
         {
           key: 3,
-          type: 1,
+          type: 5,
+          def: false,
           content: [
-            `Tipuri de date (Partea I)`,
-            "Intregi și se declară cu `int` sau `long long`",
-            "Reale  și se declară cu `float` sau `double`",
+            `Răspunsul final`,
+            "23456, 23654, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 63452, 65234 și 65432",
+            ,
           ],
         },
         {
           key: 4,
           type: 1,
           content: [
-            "Tipuri de date (Partea II)",
-            "Caractere și se declară cu `char`",
-            "Valori de Adevar se declară cu `bool` și pot avea doar 2 valori, adevărat sau fals.            ",
+            "Și acum, variantele de probleme întâlnite la bac...            ",
+            "Avem trandafiri, lalele, azalee și orhidee. Dacă nu putem avea lalele lângă orhidee, câte buchete de 3 flori putem face?",
+            "Hai să le numerotăm !           ",
           ],
         },
         {
           key: 5,
           type: 1,
           content: [
-            "OK, ok... Dar ce facem cu ele?            ",
-            "- Algoritmi?            ",
-            "Da, algoritmi. Nu știi ce sunt algoritmii?            ",
+            "trandafir = 1, lalea = 2, azalee = 3, orhidee = 4.            ",
+            "Și avem ghivece cu 3 flori, adică numere de 3 cifre.            ",
+            "Cu alte cuvinte, reformulând, avem numere de 3 cifre, în care nu putem avea cifra 2 lângă cifra 4.            ",
           ],
         },
         {
           key: 6,
-          type: 3,
-          content: [
-            "/bac3Illustration.svg",
-            "Când te speli pe dinți, ce faci?            ",
-          ],
-        },
-        {
-          key: 7,
-          type: 1,
-          content: [
-            "Un exemplu de algoritm:",
-            "Deschizi robinetul , Umezești periuța , Aplici pastă de dinți",
-            "Te speli pe dinți , Te clătești , Clătești periuța , Închizi robinetul ",
-          ],
-        },
-        {
-          key: 8,
           type: 5,
           def: false,
           content: [
-            "Un algoritm este o secvență de instrucțiuni care rezolvă o problemă.",
-            "În cazul nostru, problema era să ne spălăm pe dinți. Mai sunt 100 de algoritmi pe care îi folosim zilnic, dar nu ne-am format vederea să îi vedem așa.",
-          ],
-        },
-        {
-          key: 9,
-          type: 1,
-          content: [
-            "Ia o mică pauză",
-            "Gândește-te la alți algoritmi pe care îi folosești uzual.",
-            "Gata? Hai să continuăm.",
-          ],
-        },
-        {
-          key: 10,
-          type: 1,
-          content: [
-            "Hai acum să vedem cum arată un algoritm în C++ și care sunt pașii pe care trebuie să îi urmăm pentru a-l scrie.",
-            "Declarăm variabilele de care avem nevoie ,  Citim valorile de care avem nevoie ",
-            "Rezolvăm problema , Afișăm rezultatul ! ",
-          ],
-        },
-        {
-          key: 11,
-          type: 3,
-          code: true,
-          content: [
-            "/bac3Code.svg",
-            "Uite triviala sumă a 2 numere            ",
-          ],
-        },
-        {
-          key: 12,
-          type: 5,
-          def: false,
-          content: [
-            "Ne amintim din prima lecție și ce alte operații putem face cu variabilele. Îți aduci aminte de adunare, scădere, înmulțire și împărțire?",
-            "Așa cum erau folosite la exercițiul 1, așa se folosesc și aici.            ",
+            "Din nou... simplu, nu?            ",
+            "132, 134, 142, 143, 231, 234, 241, 243, 314, 324, 341, 342, 413, 423, 431, 432.            ",
           ],
         },
       ]}
@@ -294,4 +142,4 @@ function Bac3() {
   );
 }
 
-export default Bac3;
+export default Bac2;

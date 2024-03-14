@@ -2,14 +2,12 @@
 
 import Highlight from "../../Highlight";
 import Link from "next/link";
-import Exercise from "../../Exercise";
-import { useEffect, useState } from "react";
 import TypeLesson from "../../TypeLesson";
 
-function Bac1() {
+function Bac0() {
   return (
     <TypeLesson
-      title="Aritmetică și Operatori Liniari"
+      title="Introducere"
       course="N-am chef de BAC, ce fac?"
       next="2"
       parts={[
@@ -18,9 +16,9 @@ function Bac1() {
           type: 1,
 
           content: [
-            "Concept Dificil ? ",
-            "Termeni grei, știu, dar cu o explicație mult mai simplă. Ei de fapt reprezintă operații simple de matematică, cum ar fi adunarea, scăderea, înmulțirea și împărțirea. În cazul operatorilor liniari, se adaugă și împărțirea cu rest.",
-            `Cum era aia... "Nu știu ce e aia împărțire cu rest, dar știu că era simplă"? Ei bine, nu e chiar așa de simplă, dar nici foarte grea.`,
+            "Introducere",
+            "Bine ai venit la cursul de BAC. Prima lecție va fi despre cum poți folosi acest curs pentru a-ți atinge potențialul maxim și a lua nota 10 (zece) la examenul de Bacalaureat",
+            "Vei găsi informații, teorie explicată, exerciții rezolvate și multe altele. Pentru a trece la următoarea parte a lecției, apasă butonul de mai jos.",
           ],
         },
         {
@@ -28,59 +26,27 @@ function Bac1() {
           type: 1,
 
           content: [
-            "În cazul împărțirii cu rest, împărțirea se face cu /, iar restul se notează cu %.",
-            "De exemplu 6 = 5 * 1 + 1, deci 6 % 5 = 1.",
-            `Restul întotdeauna va fi mai mic decât împărțitorul.`,
+            "Ce ar trebui să stiu / să fac pentru a lua BAC-ul?",
+            "Încearcă să urmăreșți cât de atent poți acest curs. La finalul fiecărei lecții vei avea câteva exerciții pentru a-ți testa cunoștiințele dobândite. Dacă nu înțelegi ceva, te rugăm, nu ezita să revii la începutul lecției (folosește bara de progres sau butonul de back / săgeată stânga) pentru a putea reciti părțile dificile ale cursului.",
+            "De asemenea, în curând, vei putea să pui întrebări pe forumul nostru și să primești răspunsuri de la câțiva colegi sau chiar de la profesorii noștri acreditați de The Software Academy.",
           ],
         },
         {
           key: 2,
           type: 1,
           content: [
-            "În cazul operatorilor liniari, se adaugă și operatorii de comparație, cum ar fi <, >, <=, >=, ==, !=",
-            " 5 < 6 este adevărat.",
-            "5 > 6 este fals.",
+            "Ce primesc la schimb?",
+            "Stai. Pe lângă cunoștinte, mai primesc și altceva? Logic. Doar nu învățăm informatică strict pentru un examen, nu? Și chiar și așa, cine știe, poate-ți vei dori până la finalul cursului să fii și tu un stimat programmer.",
+            "La finalul fiecărei lecții vei colecta XP (puncte de experiență) care te vor ajuta să avansezi în clasamentul nostru. Alături de asta, pe profilul tău vei avea și badge-uri ce vor reprezenta realizările tale în învățarea informaticii. Apoi... cu fiecare nivel, vei primi și alte beneficii... dar, mai avem până acolo. O ultimă chestie și lăsăm...",
           ],
         },
         {
           key: 3,
           type: 1,
           content: [
-            `În cazul operatorilor de comparație, se adaugă și operatorii logici, cum ar fi  &&, || ,!`,
-            "Aceștia se folosesc pentru a combina două valori adevărate sau false, iar rezultatul va fi adevărat sau fals.",
-            "|| înseamnă sau, && înseamnă și, iar ! înseamnă nu / not sau opusul.",
-          ],
-        },
-        {
-          key: 4,
-          type: 1,
-          content: [
-            `Operațiile de bază sunt adunarea, scăderea, înmulțirea și împărțirea, dar și atribuirea.`,
-            "a = 2 + 3  ; b = 3 - 1 ;  ",
-            "a = 3 * 8 ;   b = 25 / 5 ;   a = b ;",
-          ],
-        },
-        {
-          key: 5,
-          type: 1,
-          content: [
-            "Cum rezolv acest exercițiu la BAC?",
-            `Ei bine, în primul rând trebuie să citești cu atenție enunțul. Dacă nu înțelegi ceva, citește-l din nou. Dacă nu înțelegi nimic, citește-l iar din nou. După asta, totul este simplu. Matematica de clasa a 3-a. Cel mai simplu este să-ți pui întrebarea, "cum ar arăta asta în caietul meu de când eram în (școala) primară?"`,
-            `Și încă ceva, uneori, este cel mai bine să iau fiecare variantă și să o verific. Totuși, lucrăm cu grile => răspunsul este acolo, trebuie doar să-l găsim.`,
-          ],
-        },
-        {
-          key: 6,
-          type: 4,
-          content: [
-            "Variabila x este de tip real. Care dintre următoarele expresii C/C++ are valoarea 1 dacă și numai dacă numărul real memorat în variabila x aparține intervalului(5, 8]?",
-            "a. (x<8) && (x>=5)",
-            "b. (x<=8) || (x>5)",
-            "c. (x>8) || (x<=5)",
-            "d. (x<=8) && (x>5)",
-            "Cum ar arăta asta în caietul meu de când eram în (școala) primară?",
-            "X este mai mare decât 5 și mai mic sau egal cu 8.",
-            "d. (x<=8) && (x>5)",
+            "Cum vei putea, drag student, să parcurgi toate lecțiile și să înveți cât mai eficient?",
+            "Structura pe lecții este făcută pe baza exercițiilor pe care le poți întâlni la examenul de bacalaureat. Pentru a lua o notă cât mai mare, va fi mai simplu să învățăm subiectele I și II, să împușcăm nota 7, și după, pentru a ajunge mai departe, trecem subiectul III.",
+            "Primele 2 capitole vor face întocmai asta, deci hai să începem cu Subiectul I: Lecția 1. Aritmetică și Operatori Liniari.",
           ],
         },
       ]}
@@ -88,4 +54,4 @@ function Bac1() {
   );
 }
 
-export default Bac1;
+export default Bac0;

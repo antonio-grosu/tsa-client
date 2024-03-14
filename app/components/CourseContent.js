@@ -52,7 +52,7 @@ function CourseContent(props) {
                   href={lesson.link ? lesson.link : "/course/bac"}
                   key={lesson.id}
                   className={
-                    lesson.id < 4
+                    lesson.id < 5
                       ? "pl-4 text-white hover:text-lime-300 cursor-pointer text-sm mb-2"
                       : "pl-4 text-gray-500 cursor-auto text-sm mb-2"
                   }
