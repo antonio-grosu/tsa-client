@@ -8,44 +8,52 @@ function CourseContent(props) {
   return (
     <div className="bg-gray-600/20 md:p-4 p-8 rounded-lg grid grid-cols-1 gap-4 w-full    poppins ">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold inline-block w-full text-center">
-          Course content
-        </h1>
-        {!shown && (
-          <svg
-            className="w-8 h-8 text-white inline-block cursor-pointer ml-4 p-2 bg-neutral-700/50 rounded-md"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 14"
+        <div className="w-full inline-block">
+          <h1
             onClick={() => setShown(!shown)}
+            className="text-2xl font-semibold inline-block w-full text-center text-white self-center cursor-pointer float-left"
           >
-            <path d="M10 0C4.612 0 0 5.336 0 7c0 1.742 3.546 7 10 7 6.454 0 10-5.258 10-7 0-1.664-4.612-7-10-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
-          </svg>
-        )}
-        {shown && (
-          <svg
-            className="w-8 h-8 text-white cursor-pointer p-2 bg-neutral-700 rounded-md"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            onClick={() => setShown(!shown)}
-          >
-            <path d="m2 13.587 3.055-3.055A4.913 4.913 0 0 1 5 10a5.006 5.006 0 0 1 5-5c.178.008.356.026.532.054l1.744-1.744A8.973 8.973 0 0 0 10 3C4.612 3 0 8.336 0 10a6.49 6.49 0 0 0 2 3.587Z" />
-            <path d="m12.7 8.714 6.007-6.007a1 1 0 1 0-1.414-1.414L11.286 7.3a2.98 2.98 0 0 0-.588-.21l-.035-.01a2.981 2.981 0 0 0-3.584 3.583c0 .012.008.022.01.033.05.204.12.401.211.59l-6.007 6.007a1 1 0 1 0 1.414 1.414L8.714 12.7c.189.091.386.162.59.211.011 0 .021.007.033.01a2.981 2.981 0 0 0 3.584-3.584c0-.012-.008-.023-.011-.035a3.05 3.05 0 0 0-.21-.588Z" />
-            <path d="M17.821 6.593 14.964 9.45a4.952 4.952 0 0 1-5.514 5.514L7.665 16.75c.767.165 1.55.25 2.335.251 6.453 0 10-5.258 10-7 0-1.166-1.637-2.874-2.179-3.407Z" />
-          </svg>
-        )}
+            Course content
+          </h1>
+          {/*!shown && (
+            <svg
+              className="w-8 h-8 text-white inline-block cursor-pointer ml-4 p-2 bg-neutral-700/50 rounded-md float-right md:visible invisible"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 14"
+              onClick={() => setShown(!shown)}
+            >
+              <path d="M10 0C4.612 0 0 5.336 0 7c0 1.742 3.546 7 10 7 6.454 0 10-5.258 10-7 0-1.664-4.612-7-10-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
+            </svg>
+          )}
+          {shown && (
+            <svg
+              className="w-8 h-8 text-white cursor-pointer p-2 bg-neutral-700 rounded-md float-right md:visible invisible"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              onClick={() => setShown(!shown)}
+            >
+              <path d="m2 13.587 3.055-3.055A4.913 4.913 0 0 1 5 10a5.006 5.006 0 0 1 5-5c.178.008.356.026.532.054l1.744-1.744A8.973 8.973 0 0 0 10 3C4.612 3 0 8.336 0 10a6.49 6.49 0 0 0 2 3.587Z" />
+              <path d="m12.7 8.714 6.007-6.007a1 1 0 1 0-1.414-1.414L11.286 7.3a2.98 2.98 0 0 0-.588-.21l-.035-.01a2.981 2.981 0 0 0-3.584 3.583c0 .012.008.022.01.033.05.204.12.401.211.59l-6.007 6.007a1 1 0 1 0 1.414 1.414L8.714 12.7c.189.091.386.162.59.211.011 0 .021.007.033.01a2.981 2.981 0 0 0 3.584-3.584c0-.012-.008-.023-.011-.035a3.05 3.05 0 0 0-.21-.588Z" />
+              <path d="M17.821 6.593 14.964 9.45a4.952 4.952 0 0 1-5.514 5.514L7.665 16.75c.767.165 1.55.25 2.335.251 6.453 0 10-5.258 10-7 0-1.166-1.637-2.874-2.179-3.407Z" />
+            </svg>
+          )*/}
+        </div>
       </div>
       {/* each chapter and its lessons rendered */}
       <div>
-        <h3 className="poppins  font-bold text-xl w-full text-center text-lime-300">
+        <h3
+          onClick={() => setShown(!shown)}
+          className="poppins  font-bold text-xl w-full text-center text-lime-300 cursor-pointer"
+        >
           Subiectul I
         </h3>
         {shown &&
           props.lessons
-            .filter((lesson) => lesson.id < 8)
+            .filter((lesson) => lesson.id < 9)
             .map((lesson) => (
               <ul className="list-disc list-inside mt-2">
                 <Link
@@ -72,18 +80,21 @@ function CourseContent(props) {
                       />
                     </svg>
                   )}
-                  {lesson.title}
+                  {lesson.id}. {lesson.title}
                 </Link>
               </ul>
             ))}
       </div>
       <div className="border-t-2 border-white/20 pt-4">
-        <h3 className="poppins  font-bold text-xl w-full text-center text-lime-300">
+        <h3
+          onClick={() => setShown(!shown)}
+          className="poppins  font-bold text-xl w-full text-center text-lime-300 cursor-pointer"
+        >
           Subiectul II
         </h3>
         {shown &&
           props.lessons
-            .filter((lesson) => lesson.id > 7 && lesson.id < 18)
+            .filter((lesson) => lesson.id > 8 && lesson.id < 19)
             .map((lesson) => (
               <ul className="list-disc list-inside  mt-2">
                 <Link
@@ -106,18 +117,21 @@ function CourseContent(props) {
                       />
                     </svg>
                   )}
-                  {lesson.title}
+                  {lesson.id}. {lesson.title}
                 </Link>
               </ul>
             ))}
       </div>
       <div className="border-t-2 border-white/20 pt-4">
-        <h3 className="poppins  font-bold text-xl w-full text-center text-lime-300">
+        <h3
+          onClick={() => setShown(!shown)}
+          className="poppins  font-bold text-xl w-full text-center text-lime-300 cursor-pointer"
+        >
           Subiectul III
         </h3>
         {shown &&
           props.lessons
-            .filter((lesson) => lesson.id > 17 && lesson.id < 35)
+            .filter((lesson) => lesson.id > 18 && lesson.id < 36)
             .map((lesson) => (
               <ul className="list-disc list-inside  mt-2">
                 <Link
@@ -140,7 +154,7 @@ function CourseContent(props) {
                       />
                     </svg>
                   )}
-                  {lesson.title}
+                  {lesson.id}. {lesson.title}
                 </Link>
               </ul>
             ))}
