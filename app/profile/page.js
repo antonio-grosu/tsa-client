@@ -35,12 +35,12 @@ function Profile() {
     return (
       <div className="py-36 px-8 md:px-24 lg:px-36 xl:px-48 2xl:px-72 flex-col bg-neutral-950 text-lime-300 p-4 h-duh flex items-center gap-8">
         {/* div profile calculator */}
-        <div className="flex md:flex-row lg:flex-row xl:flex-row 2xl:flex-row flex-col justify-center gap-8 w-full mt-12 justify-between">
-          <div className="md:w-1/2 flex flex-col items-center justify-center">
+        <div className="justify-center gap-8 w-full mt-12 justify-between flex md:flex-row lg:flex-row xl:flex-row 2xl:flex-row flex-col">
+          <div className="md:w-1/2 items-center justify-center flex lg:w-1/2 xl:w-1/2">
             {/* div hei <nume>*/}
-            <div className="text-4xl text-white font-bold justify-center items-center flex flex-row">
+            <div className="md:text-4xl text-3xl text-white font-bold justify-center items-center p-3">
               Hei,
-              <span className="text-lime-300 text-4xl p-3 font-bold mr-5">
+              <span className="text-lime-300 p-3 font-bold">
                 {user.userName}
               </span>
             </div>
