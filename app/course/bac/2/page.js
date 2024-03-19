@@ -18,9 +18,9 @@ function Bac1() {
           type: 1,
 
           content: [
-            "Ce sunt astia?",
-            "Aritmetica este matematica Termeni grei, știu, dar cu o explicație mult mai simplă. Ei de fapt reprezintă operații simple de matematică, cum ar fi adunarea, scăderea, înmulțirea și împărțirea. În cazul operatorilor liniari, se adaugă și împărțirea cu rest.",
-            `Cum era aia... "Nu știu ce e aia împărțire cu rest, dar știu că era simplă"? Ei bine, nu e chiar așa de simplă, dar nici foarte grea.`,
+            "Aritmetică: Recapitulare",
+            "Aritmetica este matematica din anii primari: adunarea, scăderea, înmulțirea, etc. Da, este extrem de simplu. De exemplu: 2 + 3 = 5, 5 - 3 = 2, 2 * 3 = 6. Și așa mai departe.",
+            "Ca sa facem lucrurile mai interesante, putem sa lucram si cu necunoscute (variabile). Avem ecuatia 2 + x = 7, de unde putem deduce usor ca x = 5.",
           ],
         },
         {
@@ -28,9 +28,9 @@ function Bac1() {
           type: 1,
 
           content: [
-            "În cazul împărțirii cu rest, împărțirea se face cu /, iar restul se notează cu %.",
+            "Okay... pai si care e faza cu aritmetica in informatica?",
             "De exemplu 6 = 5 * 1 + 1, deci 6 % 5 = 1.",
-            `Restul întotdeauna va fi mai mic decât împărțitorul.`,
+            "Restul întotdeauna va fi mai mic decât împărțitorul.",
           ],
         },
         {
@@ -38,7 +38,7 @@ function Bac1() {
           type: 1,
           content: [
             "În cazul operatorilor liniari, se adaugă și operatorii de comparație, cum ar fi <, >, <=, >=, ==, !=",
-            " 5 < 6 este adevărat.",
+            "5 < 6 este adevărat.",
             "5 > 6 este fals.",
           ],
         },
