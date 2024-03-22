@@ -57,25 +57,42 @@ const BentoCourses = () => {
       dynamicWidth: 200,
       link: "/course/python",
     },
+    ads1: {
+      title: "Algorithms and Data Structures",
+      description:
+        "In this introductory course, we'll unravel the essentials of efficient problem-solving in computer science. From mastering algorithms to designing powerful data structures, get ready to enhance your programming prowess.",
+      courseLogo: Logo,
+      bgColor: "bg-slate-900",
+      textColor: "text-white",
+      dynamicHeight: 200,
+      dynamicWidth: 200,
+      link: "/course/ads1",
+    },
+    ads2: {
+      title: "Advanced Algorithms and Data Structures",
+      description:
+        "Building on your foundational knowledge, this course delves deep into intricate algorithms, advanced data structures, and sophisticated techniques used by seasoned professionals.",
+      courseLogo: Logo,
+      bgColor: "bg-slate-900",
+      textColor: "text-white",
+      dynamicHeight: 200,
+      dynamicWidth: 200,
+      link: "/course/ads2",
+    },
   };
   return (
     <div className="flex flex-row items-center justify-center p-10 w-full bg-black">
-      <div className="grid grid-cols-2 col-auto w-2/3 bg-white">
-        {Object.keys(courses).map((course, index) => {
-          return (
-            <ImageComponent
-              key={index}
-              title={courses[course].title}
-              description={courses[course].description}
-              dynamicWidth={courses[course].dynamicWidth}
-              dynamicHeight={courses[course].dynamicHeight}
-              courseLogo={courses[course].courseLogo}
-              bgColor={courses[course].bgColor}
-              textColor={courses[course].textColor}
-              link={courses[course].link}
-            />
-          );
-        })}
+      <div className="grid grid-cols-5 col-auto w-2/3 bg-white">
+        <ImageComponent
+          title={courses.ads1.title}
+          description={courses.ads1.description}
+          courseLogo={courses.ads1.courseLogo}
+          bgColor={courses.ads1.bgColor}
+          textColor={courses.ads1.textColor}
+          dynamicHeight={courses.ads1.dynamicHeight}
+          dynamicWidth={courses.ads1.dynamicWidth}
+          link={courses.ads1.link}
+        />
       </div>
     </div>
   );

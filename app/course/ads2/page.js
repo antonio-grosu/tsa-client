@@ -14,9 +14,9 @@ function AdsCourse() {
   const [noAcc, setNoAcc] = useState(true);
   const courseId = 1;
   const price = 25;
-  const name = "Curs BAC";
+  const name = "Algorithms and Data Structures II";
   const description =
-    "Cursul care te va ajuta sa iti atingi potentialul maxim si sa iei nota 10 (zece) la examenul de Bacalaureat";
+    "Building on your foundational knowledge, this course delves deep into intricate algorithms, advanced data structures, and sophisticated techniques used by seasoned professionals.";
 
   useEffect(() => {
     setLoading(true);

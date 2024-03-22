@@ -14,10 +14,9 @@ function AlgoCourse() {
   const [noAcc, setNoAcc] = useState(true);
   const courseId = 1;
   const price = 25;
-  const name = "Curs BAC";
+  const name = "Algorithms and Data Structures";
   const description =
-    "Cursul care te va ajuta sa iti atingi potentialul maxim si sa iei nota 10 (zece) la examenul de Bacalaureat";
-
+    "In this introductory course, we'll unravel the essentials of efficient problem-solving in computer science. From mastering algorithms to designing powerful data structures, get ready to enhance your programming prowess.";
   useEffect(() => {
     setLoading(true);
     const id = localStorage.getItem("userId");
