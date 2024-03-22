@@ -4,6 +4,8 @@ import Highlight from "../../Highlight";
 import Link from "next/link";
 import TypeLesson from "../../TypeLesson";
 
+// lectie terminata
+
 function Bac0() {
   return (
     <TypeLesson
