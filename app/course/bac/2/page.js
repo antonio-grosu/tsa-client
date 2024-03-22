@@ -9,7 +9,7 @@ import TypeLesson from "../../TypeLesson";
 function Bac1() {
   return (
     <TypeLesson
-      title="Aritmetică și Operatori Liniari"
+      title="Aritmetică și Operatori Logici"
       course="N-am chef de BAC, ce fac?"
       next="3"
       parts={[
@@ -28,17 +28,17 @@ function Bac1() {
           type: 1,
 
           content: [
-            "Okay... pai si care e faza cu aritmetica in informatica?",
-            "De exemplu 6 = 5 * 1 + 1, deci 6 % 5 = 1.",
-            "Restul întotdeauna va fi mai mic decât împărțitorul.",
+            "Ce poate sa ne pice?",
+            "Operatorii logici tot din matematica fac parte, dar nu lucreaza cu numere, ci cu valori de adevar (adevarat sau fals). Sa luam o propozitie: Bacalaureatul are probe scrise si orale - propozitie adevarata. Luam alta propozitie: Programarea nu se face pe calculator - propozitie falsa.",
+            "Desi, noi nu lucram cu propozitii deocamdata, lucram cu numere, nu? Hai sa vedem si un exemplu pentru asta: Propozitia 6 < 7 este adevarata. Hai sa intram mai in detaliu:",
           ],
         },
         {
           key: 2,
-          type: 1,
+          type: 6,
           content: [
-            "În cazul operatorilor liniari, se adaugă și operatorii de comparație, cum ar fi <, >, <=, >=, ==, !=",
-            "5 < 6 este adevărat.",
+            "Operatorii de comparație sunt simboluri speciale pe care le folosim când programăm pentru a spune calculatorului să compare două valori ",
+            "și să ne spună dacă ele sunt la fel sau diferite, sau dacă unul este mai mare sau mai mic decât celălalt",
             "5 > 6 este fals.",
           ],
         },
