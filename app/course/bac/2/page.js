@@ -79,6 +79,66 @@ function Bac1() {
             "Ati vazut in exercitiul anterior operatorul && (si). Acesta este un operator logic. Hai sa vedem mai departe 1. Ce inseamna concret && 2. Ce alti operatori logici mai exista.",
           ],
         },
+        {
+          key: 6,
+          type: 1,
+          content: [
+            "Operatori logici",
+            "Operatorii logici sunt folositi pentru a face comparatii intre valori de adevar (true sau false).",
+            "Operatorii logici sunt: && (si), || (sau), ! (negatie). Cel mai usor mod de a le intelege este sa facem cateva exercitii.",
+          ],
+        },
+        {
+          key: 7,
+          type: 4,
+          content: [
+            "Care este valoarea expresiei 1 && 0?",
+            "a. 1 (Adevarat)",
+            "b. 0 (Fals)",
+            "c. -1 (Eroare)",
+            "d. 2 (Eroare)",
+            "In limbajul C/C++, 1 reprezinta adevarat, iar 0 reprezinta fals. Cand folosim operatorul &&, ambele valori trebuie sa fie adevarate pentru ca rezultatul sa fie adevarat.",
+            "Corect. Adevarat && fals este fals.",
+            "b. 0 (Fals)",
+          ],
+        },
+        {
+          key: 8,
+          type: 4,
+          content: [
+            "Care este valoarea expresiei 1 || 0?",
+            "a. 1 (Adevarat)",
+            "b. 0 (Fals)",
+            "c. -1 (Eroare)",
+            "d. 2 (Eroare)",
+            "In limbajul C/C++, 1 reprezinta adevarat, iar 0 reprezinta fals. Cand folosim operatorul ||, doar unul dintre valori trebuie sa fie adevarat pentru ca rezultatul sa fie adevarat.",
+            "Corect. Adevarat || fals este adevarat.",
+            "a. 1 (Adevarat)",
+          ],
+        },
+        {
+          key: 9,
+          type: 4,
+          content: [
+            "Care este valoarea expresiei !1?",
+            "a. 1 (Adevarat)",
+            "b. 0 (Fals)",
+            "c. -1 (Eroare)",
+            "d. 1! (1 factorial)",
+            "Daca 1 inseamna adevarat, atunci negatia lui 1 inseamna...",
+            "Corect. Negatia lui adevarat este fals.",
+            "b. 0 (Fals)",
+          ],
+        },
+        {
+          key: 10,
+          type: 1,
+          content: [
+            "Concluzie",
+            "In aceasta lectie am invatat despre operatorii de comparatie si operatorii logici. Operatorii de comparatie sunt folositi pentru a compara doua valori, iar operatorii logici sunt folositi pentru a face comparatii intre valori de adevar.",
+            "In continuare, vom lucra mai mult partea teoretica in cursuri, iar exercitiile pentru fixarea cunostintelor le veti gasi in sectiunea respectiva.",
+          ],
+        },
       ]}
     />
   );
