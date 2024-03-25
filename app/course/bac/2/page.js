@@ -70,6 +70,15 @@ function Bac1() {
             "b. 4 - x * x > 0",
           ],
         },
+        {
+          key: 5,
+          type: 1,
+          content: [
+            "Deci, pe scurt, acestea sunt comparatiile pe care le putem face in C/C++",
+            "In continuare vom lucra mai mult partea teoretica in cursuri, iar exercitiile pentru fixarea cunostintelor le vei gasi in sectiunea respectiva.",
+            "Ati vazut in exercitiul anterior operatorul && (si). Acesta este un operator logic. Hai sa vedem mai departe 1. Ce inseamna concret && 2. Ce alti operatori logici mai exista.",
+          ],
+        },
       ]}
     />
   );
