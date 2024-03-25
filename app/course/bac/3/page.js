@@ -76,9 +76,9 @@ function Bac2() {
           type: 1,
 
           content: [
-            "Hmmm... Alt termen greu",
-            "Hmm... Alt termen greu, dar de fapt extrem de simplu. Hai să ne aducem aminte de clasa a II-a, când am avut un exercițiu de genul:       ",
-            "Scrieți toate numerele de 3 cifre distincte care se pot forma cu cifrele 2, 3 și 4.            ",
+            "Ce poate fi asta?",
+            "Hmm... sunt ciudat, nu? Promit, este extrem de simplu. Ia-ti o foaie de hartie si un creion sau deschide un note si hai să ne aducem aminte de clasa a II-a, când am avut un exercițiu de genul:",
+            "Scrieți toate numerele de 3 cifre distincte care se pot forma cu cifrele 2, 3 și 4. Te invit să încerci și tu inainte să continui.",
           ],
         },
         {
@@ -87,8 +87,8 @@ function Bac2() {
 
           content: [
             "Păi simplu: 234, 243, 324, 342, 423, 432.",
-            "Hmm... sunt crescătoare.            ",
-            `Acum, din nou, dar cu alte reguli...            `,
+            "Hmm... sunt crescătoare.",
+            `Acum, din nou, dar cu alte reguli...`,
           ],
         },
         {
