@@ -20,11 +20,15 @@ const TypeLesson = (props) => {
   const handleClickNext = () => {
     setNewIndex((prev) => prev + 1);
     setPlaySound(true);
+    setChoice("");
+    setCorrect(false);
   };
 
   const handleClickBack = () => {
     setNewIndex((prev) => prev - 1);
     setPlaySound(true);
+    setChoice("");
+    setCorrect(false);
   };
 
   useEffect(() => {
@@ -343,6 +347,20 @@ const TypeLesson = (props) => {
               </h4>
               <p className="slide-in bg-white/20 p-4 text-xs rounded-md ">
                 {parts[newIndex].content[1]}
+              </p>
+            </div>
+          )}
+
+          {!finished && parts[newIndex] && parts[newIndex].type === 6 && (
+            <div className="flex flex-col gap-4 text-white md:w-10/12 md:px-12">
+              <h4 className="slide-in text-lg font-bold text-center w-full text-lime-50">
+                {parts[newIndex].content[0]}
+              </h4>
+              <p className="slide-in bg-white/30 p-5 text-sm rounded-md ">
+                {parts[newIndex].content[1]}
+              </p>
+              <p className="slide-in bg-white/30 p-5 text-sm rounded-md ">
+                {parts[newIndex].content[2]}
               </p>
             </div>
           )}

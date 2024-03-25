@@ -9,7 +9,7 @@ import TypeLesson from "../../TypeLesson";
 function Bac1() {
   return (
     <TypeLesson
-      title="Aritmetică și Operatori Liniari"
+      title="Aritmetică și Operatori Logici"
       course="N-am chef de BAC, ce fac?"
       next="3"
       parts={[
@@ -28,52 +28,25 @@ function Bac1() {
           type: 1,
 
           content: [
-            "Okay... pai si care e faza cu aritmetica in informatica?",
-            "De exemplu 6 = 5 * 1 + 1, deci 6 % 5 = 1.",
-            "Restul întotdeauna va fi mai mic decât împărțitorul.",
+            "Ce poate sa ne pice?",
+            "Operatorii logici tot din matematica fac parte, dar nu lucreaza cu numere, ci cu valori de adevar (adevarat sau fals). Sa luam o propozitie: Bacalaureatul are probe scrise si orale - propozitie adevarata. Luam alta propozitie: Programarea nu se face pe calculator - propozitie falsa.",
+            "Desi, noi nu lucram cu propozitii deocamdata, lucram cu numere, nu? Hai sa vedem si un exemplu pentru asta: Propozitia 6 < 7 este adevarata. Hai sa intram mai in detaliu:",
           ],
         },
         {
           key: 2,
-          type: 1,
+          type: 6,
           content: [
-            "În cazul operatorilor liniari, se adaugă și operatorii de comparație, cum ar fi <, >, <=, >=, ==, !=",
-            "5 < 6 este adevărat.",
-            "5 > 6 este fals.",
+            "Operatorii de comparație sunt simboluri speciale pe care le folosim când programăm pentru a spune calculatorului să compare două valori",
+            "Ca sa ii punem pe hartie, avem: < (mai mic ca), > (mai mare ca), <= (mai mic sau egal cu), >= (mai mare sau egal cu), == (egal cu), != (diferit de).",
+            "De exemplu: 2 < 3, 3 > 2, 2 <= 2, 3 >= 3, 2 == 2, 3 != 2.",
           ],
         },
         {
           key: 3,
-          type: 1,
-          content: [
-            `În cazul operatorilor de comparație, se adaugă și operatorii logici, cum ar fi  &&, || ,!`,
-            "Aceștia se folosesc pentru a combina două valori adevărate sau false, iar rezultatul va fi adevărat sau fals.",
-            "|| înseamnă sau, && înseamnă și, iar ! înseamnă nu / not sau opusul.",
-          ],
-        },
-        {
-          key: 4,
-          type: 1,
-          content: [
-            `Operațiile de bază sunt adunarea, scăderea, înmulțirea și împărțirea, dar și atribuirea.`,
-            "a = 2 + 3  ; b = 3 - 1 ;  ",
-            "a = 3 * 8 ;   b = 25 / 5 ;   a = b ;",
-          ],
-        },
-        {
-          key: 5,
-          type: 1,
-          content: [
-            "Cum rezolv acest exercițiu la BAC?",
-            `Ei bine, în primul rând trebuie să citești cu atenție enunțul. Dacă nu înțelegi ceva, citește-l din nou. Dacă nu înțelegi nimic, citește-l iar din nou. După asta, totul este simplu. Matematica de clasa a 3-a. Cel mai simplu este să-ți pui întrebarea, "cum ar arăta asta în caietul meu de când eram în (școala) primară?"`,
-            `Și încă ceva, uneori, este cel mai bine să iau fiecare variantă și să o verific. Totuși, lucrăm cu grile => răspunsul este acolo, trebuie doar să-l găsim.`,
-          ],
-        },
-        {
-          key: 6,
           type: 4,
           content: [
-            "Variabila x este de tip real. Care dintre următoarele expresii C/C++ are valoarea 1 dacă și numai dacă numărul real memorat în variabila x aparține intervalului(5, 8]?",
+            "Variabila x este de tip real. Care dintre următoarele expresii C/C++ are valoarea 1 (e adevarata) dacă și numai dacă numărul real memorat în variabila x aparține intervalului (5, 8]?",
             "a. (x<8) && (x>=5)",
             "b. (x<=8) || (x>5)",
             "c. (x>8) || (x<=5)",
@@ -81,6 +54,89 @@ function Bac1() {
             "Cum ar arăta asta în caietul meu de când eram în (școala) primară?",
             "X este mai mare decât 5 și mai mic sau egal cu 8.",
             "d. (x<=8) && (x>5)",
+          ],
+        },
+        {
+          key: 4,
+          type: 4,
+          content: [
+            "Care dintre următoarele expresii C/C++ are valoarea 1 dacă şi numai dacă numărul real memorat în variabila x se află în intervalul (-2,2)",
+            "a. x * x - 4 <= 0",
+            "b. 4 - x * x > 0",
+            "c. (2 < x && x < -2)",
+            "d. (x - 2) * (x + 2) > 0",
+            "* este operatorul de înmulțire, iar && este operatorul și.",
+            "Orice numar real ridicat la patrat este pozitiv, iar daca |x| < 2, atunci x patrat este mai mic decat 4.",
+            "b. 4 - x * x > 0",
+          ],
+        },
+        {
+          key: 5,
+          type: 1,
+          content: [
+            "Deci, pe scurt, acestea sunt comparatiile pe care le putem face in C/C++",
+            "In continuare vom lucra mai mult partea teoretica in cursuri, iar exercitiile pentru fixarea cunostintelor le vei gasi in sectiunea respectiva.",
+            "Ati vazut in exercitiul anterior operatorul && (si). Acesta este un operator logic. Hai sa vedem mai departe 1. Ce inseamna concret && 2. Ce alti operatori logici mai exista.",
+          ],
+        },
+        {
+          key: 6,
+          type: 1,
+          content: [
+            "Operatori logici",
+            "Operatorii logici sunt folositi pentru a face comparatii intre valori de adevar (true sau false).",
+            "Operatorii logici sunt: && (si), || (sau), ! (negatie). Cel mai usor mod de a le intelege este sa facem cateva exercitii.",
+          ],
+        },
+        {
+          key: 7,
+          type: 4,
+          content: [
+            "Care este valoarea expresiei 1 && 0?",
+            "a. 1 (Adevarat)",
+            "b. 0 (Fals)",
+            "c. -1 (Eroare)",
+            "d. 2 (Eroare)",
+            "In limbajul C/C++, 1 reprezinta adevarat, iar 0 reprezinta fals. Cand folosim operatorul &&, ambele valori trebuie sa fie adevarate pentru ca rezultatul sa fie adevarat.",
+            "Corect. Adevarat && fals este fals.",
+            "b. 0 (Fals)",
+          ],
+        },
+        {
+          key: 8,
+          type: 4,
+          content: [
+            "Care este valoarea expresiei 1 || 0?",
+            "a. 1 (Adevarat)",
+            "b. 0 (Fals)",
+            "c. -1 (Eroare)",
+            "d. 2 (Eroare)",
+            "In limbajul C/C++, 1 reprezinta adevarat, iar 0 reprezinta fals. Cand folosim operatorul ||, doar unul dintre valori trebuie sa fie adevarat pentru ca rezultatul sa fie adevarat.",
+            "Corect. Adevarat || fals este adevarat.",
+            "a. 1 (Adevarat)",
+          ],
+        },
+        {
+          key: 9,
+          type: 4,
+          content: [
+            "Care este valoarea expresiei !1?",
+            "a. 1 (Adevarat)",
+            "b. 0 (Fals)",
+            "c. -1 (Eroare)",
+            "d. 1! (1 factorial)",
+            "Daca 1 inseamna adevarat, atunci negatia lui 1 inseamna...",
+            "Corect. Negatia lui adevarat este fals.",
+            "b. 0 (Fals)",
+          ],
+        },
+        {
+          key: 10,
+          type: 1,
+          content: [
+            "Concluzie",
+            "In aceasta lectie am invatat despre operatorii de comparatie si operatorii logici. Operatorii de comparatie sunt folositi pentru a compara doua valori, iar operatorii logici sunt folositi pentru a face comparatii intre valori de adevar.",
+            "In continuare, vom lucra mai mult partea teoretica in cursuri, iar exercitiile pentru fixarea cunostintelor le veti gasi in sectiunea respectiva.",
           ],
         },
       ]}
