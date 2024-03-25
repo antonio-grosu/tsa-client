@@ -37,43 +37,16 @@ function Bac1() {
           key: 2,
           type: 6,
           content: [
-            "Operatorii de comparație sunt simboluri speciale pe care le folosim când programăm pentru a spune calculatorului să compare două valori ",
-            "și să ne spună dacă ele sunt la fel sau diferite, sau dacă unul este mai mare sau mai mic decât celălalt",
-            "5 > 6 este fals.",
+            "Operatorii de comparație sunt simboluri speciale pe care le folosim când programăm pentru a spune calculatorului să compare două valori",
+            "Ca sa ii punem pe hartie, avem: < (mai mic ca), > (mai mare ca), <= (mai mic sau egal cu), >= (mai mare sau egal cu), == (egal cu), != (diferit de).",
+            "De exemplu: 2 < 3, 3 > 2, 2 <= 2, 3 >= 3, 2 == 2, 3 != 2.",
           ],
         },
         {
           key: 3,
-          type: 1,
-          content: [
-            `În cazul operatorilor de comparație, se adaugă și operatorii logici, cum ar fi  &&, || ,!`,
-            "Aceștia se folosesc pentru a combina două valori adevărate sau false, iar rezultatul va fi adevărat sau fals.",
-            "|| înseamnă sau, && înseamnă și, iar ! înseamnă nu / not sau opusul.",
-          ],
-        },
-        {
-          key: 4,
-          type: 1,
-          content: [
-            `Operațiile de bază sunt adunarea, scăderea, înmulțirea și împărțirea, dar și atribuirea.`,
-            "a = 2 + 3  ; b = 3 - 1 ;  ",
-            "a = 3 * 8 ;   b = 25 / 5 ;   a = b ;",
-          ],
-        },
-        {
-          key: 5,
-          type: 1,
-          content: [
-            "Cum rezolv acest exercițiu la BAC?",
-            `Ei bine, în primul rând trebuie să citești cu atenție enunțul. Dacă nu înțelegi ceva, citește-l din nou. Dacă nu înțelegi nimic, citește-l iar din nou. După asta, totul este simplu. Matematica de clasa a 3-a. Cel mai simplu este să-ți pui întrebarea, "cum ar arăta asta în caietul meu de când eram în (școala) primară?"`,
-            `Și încă ceva, uneori, este cel mai bine să iau fiecare variantă și să o verific. Totuși, lucrăm cu grile => răspunsul este acolo, trebuie doar să-l găsim.`,
-          ],
-        },
-        {
-          key: 6,
           type: 4,
           content: [
-            "Variabila x este de tip real. Care dintre următoarele expresii C/C++ are valoarea 1 dacă și numai dacă numărul real memorat în variabila x aparține intervalului(5, 8]?",
+            "Variabila x este de tip real. Care dintre următoarele expresii C/C++ are valoarea 1 (e adevarata) dacă și numai dacă numărul real memorat în variabila x aparține intervalului (5, 8]?",
             "a. (x<8) && (x>=5)",
             "b. (x<=8) || (x>5)",
             "c. (x>8) || (x<=5)",
@@ -81,6 +54,20 @@ function Bac1() {
             "Cum ar arăta asta în caietul meu de când eram în (școala) primară?",
             "X este mai mare decât 5 și mai mic sau egal cu 8.",
             "d. (x<=8) && (x>5)",
+          ],
+        },
+        {
+          key: 4,
+          type: 4,
+          content: [
+            "Care dintre următoarele expresii C/C++ are valoarea 1 dacă şi numai dacă numărul real memorat în variabila x se află în intervalul (-2,2)",
+            "a. x * x - 4 <= 0",
+            "b. 4 - x * x > 0",
+            "c. (2 < x && x < -2)",
+            "d. (x - 2) * (x + 2) > 0",
+            "* este operatorul de înmulțire, iar && este operatorul și.",
+            "Orice numar real ridicat la patrat este pozitiv, iar daca |x| < 2, atunci x patrat este mai mic decat 4.",
+            "b. 4 - x * x > 0",
           ],
         },
       ]}

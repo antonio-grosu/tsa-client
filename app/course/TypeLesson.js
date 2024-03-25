@@ -20,11 +20,15 @@ const TypeLesson = (props) => {
   const handleClickNext = () => {
     setNewIndex((prev) => prev + 1);
     setPlaySound(true);
+    setChoice("");
+    setCorrect(false);
   };
 
   const handleClickBack = () => {
     setNewIndex((prev) => prev - 1);
     setPlaySound(true);
+    setChoice("");
+    setCorrect(false);
   };
 
   useEffect(() => {
