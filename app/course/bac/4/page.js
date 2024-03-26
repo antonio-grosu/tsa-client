@@ -4,7 +4,7 @@ import Highlight from "../../Highlight";
 import Link from "next/link";
 import TypeLesson from "../../TypeLesson";
 
-function Bac3() {
+function Bac4() {
   return (
     // <div className="w-full mx-auto bg-neutral-950 py-36 min-h-screen px-8">
     //   <h1 className="slide-in underline underline-offset-4 text-4xl text-lime-300 font-bold text-center poppins">
@@ -294,4 +294,4 @@ function Bac3() {
   );
 }
 
-export default Bac3;
+export default Bac4;

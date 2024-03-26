@@ -1,7 +1,7 @@
 "use client";
 import Lesson from "../../TypeLesson";
 
-function Bac4() {
+function Bac5() {
   return (
     <Lesson
       title="Lectia 4"
@@ -63,4 +63,4 @@ function Bac4() {
   );
 }
 
-export default Bac4;
+export default Bac5;

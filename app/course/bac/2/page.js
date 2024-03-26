@@ -6,7 +6,7 @@ import Exercise from "../../Exercise";
 import { useEffect, useState } from "react";
 import TypeLesson from "../../TypeLesson";
 
-function Bac1() {
+function Bac2() {
   return (
     <TypeLesson
       title="Aritmetică și Operatori Logici"
@@ -144,4 +144,4 @@ function Bac1() {
   );
 }
 
-export default Bac1;
+export default Bac2;
