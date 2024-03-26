@@ -174,30 +174,30 @@ function Bac3() {
           type: 1,
 
           content: [
-            "Nu prea ai cum să iei o notă bună la informatică fără să știi măcar un fir de cod.            ",
-            "E timpul să ne murdărim mâinile și de puțină programare. Programarea este, pe scurt, instruirea unui robot, numit compilator, să facă ce îi zicem noi.",
-            "Cel cu care lucrăm noi vorbește strict în C++. ",
+            "Sa incepem",
+            "E timpul să ne murdărim mâinile și de puțină programare. Nu prea ai cum să iei o notă bună la informatică fără să știi măcar un fir de cod.",
+            "Programarea este, pe scurt, instruirea unui robot, numit compilator, să facă ce îi zicem noi. Cel cu care lucrăm noi vorbește strict în C/C++. ",
           ],
         },
         {
           key: 1,
-          type: 1,
+          type: 6,
 
           content: [
-            "Când discutăm cu el, evident în limbajul lui, trebuie să îi oferim 3 lucruri",
-            "La fel  ca în orice dialog uman:",
-            `Context,
-            Valori,
-            Acțiuni `,
+            "Poti sa o iei ca pe un dialog cu un robot",
+            "Iar atunci când discutăm cu el, evident în limbajul C/C++, trebuie să îi oferim urmatoarele lucruri:",
+            "Context (despre ce vorbim), Valori (cu care lucram), Acțiuni (ce se va intampla cu contextul si/sau valorile). Chiar seamana putin cu un dialog, nu?",
           ],
         },
         {
           key: 2,
-          type: 5,
-          def: false,
+          type: 1,
           content: [
-            "Sau mai concret: variabile, alături de declararea și citirea / inițializarea acestora, cât și instrucțiunile / operațiile pe care vrem să le facă robotul nostru.",
-            "Variabilele sunt niște cutii în care putem pune orice, de la numere, la litere, la cuvinte, la propoziții și nu în ultimul rând, valori de adevăr.",
+            "Contextul si valorile",
+            "Okay. Cum se folosesc valorile astea?",
+            "",
+            // "Sau mai concret: variabile, alături de declararea și citirea / inițializarea acestora, cât și instrucțiunile / operațiile pe care vrem să le facă robotul nostru.",
+            // "Variabilele sunt niște cutii în care putem pune orice, de la numere, la litere, la cuvinte, la propoziții și nu în ultimul rând, valori de adevăr.",
           ],
         },
         {
