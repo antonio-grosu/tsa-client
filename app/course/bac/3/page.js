@@ -86,9 +86,9 @@ function Bac3() {
           type: 1,
 
           content: [
-            "Păi simplu: 234, 243, 324, 342, 423, 432.",
-            "Hmm... sunt crescătoare.",
-            `Acum, din nou, dar cu alte reguli...`,
+            "Raspuns: 234, 243, 324, 342, 423, 432.",
+            "Dupa cum se poate observa, numerele sunt scrise in ordine crescatoare.",
+            "Acum, din nou, dar cu alte reguli...",
           ],
         },
         {
