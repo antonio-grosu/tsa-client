@@ -88,26 +88,39 @@ function Bac3() {
           content: [
             "Raspuns: 234, 243, 324, 342, 423, 432.",
             "Dupa cum se poate observa, numerele sunt scrise in ordine crescatoare.",
-            "Acum, din nou, dar cu alte reguli...",
+            "Daca ne luam dupa definitie: Backtracking-ul este un algoritm de tipul încercare și eroare, care încearcă să găsească soluții la problemele combinatorice.",
           ],
         },
         {
           key: 2,
           type: 1,
           content: [
-            "Scrieți toate numerele de 5 cifre distincte care se pot forma cu cifrele 2, 3, 4, 5 și 6, dar în care nu putem așeza cifrele pare una lângă alta.",
-            " Variante corecte : 23456,23654",
-            "Dar nu : 23645, 23546, 23564",
+            "Sau pe scurt",
+            "Continuăm să încercăm variante până găsim una care funcționează. Dacă te blochezi, te întorci în urmă și încerci altă cale. In cazul nostru, daca as fi scris toate numerele de 3 cifre formate din 2, 3 si 4 as fi scris: ",
+            "222, 223, 224, 232, 233, 234, 242, 243, 244, 322, 323, 324, 332, 333, 334, 342, 343, 344, 422, 423, 424, 432, 433, 434, 442, 443, 444. Eliminand cele care nu au toate cifrele distincte, am ajuns la 234, 243, 324, 342, 423, 432.",
           ],
         },
         {
           key: 3,
-          type: 5,
-          def: false,
+          type: 1,
           content: [
-            `Răspunsul final`,
-            "23456, 23654, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 63452, 65234 și 65432",
-            ,
+            "Hai sa mai facem un exercitiu",
+            "Scrieți toate numerele de 5 cifre distincte care se pot forma cu cifrele 2, 3, 4, 5 și 6, dar în care nu putem așeza cifrele pare una lângă alta.",
+            "Primele 10 numere generate sunt, in ordine crescatoare: 23456, 23465, 23546, 23564, 23645, 23654, 24356, 24365, 24536, 24563. Dar nu putem avea cifre pare una langa alta, asa ca eliminam 23465, 23546, 23564, 23645, 24356, 24365, 24536, 24563 din lista. Te rugam, incearca sa continui singur inainte sa te duci mai departe.",
+          ],
+        },
+        {
+          key: 3,
+          type: 4,
+          content: [
+            "Răspunsul final este:",
+            "a. 23456, 23654, 25436, 25436, 25634, 43265, 43652, 45236, 45632, 63254, 63452, 65243, 65432.",
+            "b. 23654, 23456, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 63452, 65234, 65432.",
+            "c. 23456, 23654, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 63452, 65234, 65432.",
+            "d. 23456, 23654, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 65234, 63452, 65432.",
+            "Nu uita, in backtracking, numerele sunt fie in ordine crescatoare ori descrescatoare si trebuie sa respecte conditiile impuse.",
+            "Corect. Acestea sunt toate numerele disticte scrise in ordine crescatoare.",
+            "c. 23456, 23654, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 63452, 65234, 65432.",
           ],
         },
         {

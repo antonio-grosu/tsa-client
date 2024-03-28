@@ -58,7 +58,7 @@ function BacCourse() {
   const lessons = [
     { id: 1, title: "Introducere", link: "/course/bac/1" },
     { id: 2, title: "Aritmetica și Operatori Liniari", link: "/course/bac/2" },
-    { id: 3, title: "Backtracking", link: "/course/bac/2" },
+    { id: 3, title: "Backtracking", link: "/course/bac/3" },
     { id: 4, title: "C++ Variabile si Operatori", link: "/course/bac/4" },
     { id: 5, title: "Grafuri si tot felul" },
     { id: 6, title: "Din nou...grafuri" },
