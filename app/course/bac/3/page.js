@@ -77,7 +77,7 @@ function Bac3() {
 
           content: [
             "Ce poate fi asta?",
-            "Hmm... sunt ciudat, nu? Promit, este extrem de simplu. Ia-ti o foaie de hartie si un creion sau deschide un note si hai să ne aducem aminte de clasa a II-a, când am avut un exercițiu de genul:",
+            "Hmm... suna ciudat, nu? Promit, este extrem de simplu. Ia-ti o foaie de hartie si un creion sau deschide un note si hai să ne aducem aminte de clasa a II-a, când am avut un exercițiu de genul:",
             "Scrieți toate numerele de 3 cifre distincte care se pot forma cu cifrele 2, 3 și 4. Te invit să încerci și tu inainte să continui.",
           ],
         },
@@ -143,11 +143,43 @@ function Bac3() {
         },
         {
           key: 6,
-          type: 5,
-          def: false,
+          type: 1,
           content: [
             "Din nou... simplu, nu?            ",
-            "132, 134, 142, 143, 231, 234, 241, 243, 314, 324, 341, 342, 413, 423, 431, 432.            ",
+            "123, 132, 134, 143, 213, 214, 231, 234, 312, 314, 321, 341, 412, 413, 431, 432.            ",
+            "In traducere: (trandafir, lalea, azalee), (trandafir, azalee, lalea), (trandafir, azalee, orhidee), (trandafir, orhidee, azalee), (lalea, trandafir, azalee), (lalea, trandafir, orhidee), (lalea, azalee, trandafir), (lalea, azalee, orhidee), (azalee, trandafir, lalea), (azalee, trandafir, orhidee), (azalee, lalea, trandafir), (orhidee, trandafir, lalea), (orhidee, trandafir, azalee).            ",
+          ],
+        },
+        {
+          key: 7,
+          type: 1,
+          content: [
+            "Asta a fost tot pentru astazi.",
+            "V-am mai lasat un exercitiu de tipul celor de mai sus.",
+            "Te rugam sa il rezolvi inainte de a trece la urmatoarea lectie.",
+          ],
+        },
+        {
+          key: 8,
+          type: 4,
+          content: [
+            "Am 4 bile: una alba, una neagra, una rosie si una albastra. Daca nu putem avea bila alba langa bila albastra, cate siruri de 3 bile putem face?",
+            "a. 16",
+            "b. 10",
+            "c. 12",
+            "d. 6",
+            "Nu uita, scrie toate variantele pe o foaie de hartie si analizeaza-le pas cu pas. Primele 3 solutii sunt: (alb, negru, rosu), (alb, negru, albastru), (alb, rosu, negru).",
+            "Corect. Ordinea este: (alb, negru, rosu), (alb, negru, albastru), (alb, rosu, negru), (alb, rosu, albastru), (negru, alb, rosu), (negru, rosu, alb), (negru, rosu, albastru), (negru, albastru, rosu), (rosu, alb, negru), (rosu, negru, alb), (rosu, negru, albastru), (rosu, albastru, negru), (albastru, negru, alb), (albastru, negru, rosu), (albastru, rosu, alb), (albastru, rosu, negru).",
+            "a. 16",
+          ],
+        },
+        {
+          key: 9,
+          type: 6,
+          content: [
+            "Acesta este tiparul problemelor pe care il poti intalni la bacalaureat cu backtracking",
+            "Mai departe te sfatuim sa continui sa exersezi si sa iti testezi cunostintele cu exercitii de tipul celor de mai sus.",
+            "Daca ceva nu este clar, nu uita sa scrii toate exemplele pe o foaie de hartie si sa le analizezi pas cu pas. Este important sa intelegi cum se ajunge la rezultatul final. Mult succes!",
           ],
         },
       ]}
