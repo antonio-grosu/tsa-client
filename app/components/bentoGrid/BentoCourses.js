@@ -13,9 +13,9 @@
 
 import React from "react";
 import ImageComponent from "./ImageComponent";
+import Logo from "../../../public/Logo.svg";
 
 const BentoCourses = () => {
-  const Logo = "/Logo.svg";
   const courses = {
     bacalaureat: {
       title: "Bacalaureat",
@@ -82,23 +82,23 @@ const BentoCourses = () => {
   };
   return (
     <div className="flex flex-row items-center justify-center py-48 w-full bg-black">
-      <div className="grid grid-cols-7 grid-rows-7 w-4/5 gap-3 min-h-screen">
-        <div className="col-start-1 col-end-3 row-start-1 row-end-5 p-5 bg-white rounded-lg">
+      <div className="grid grid-cols-7 grid-rows-7 w-4/5 gap-5 min-h-screen">
+        <div className="col-start-1 col-end-3 row-start-1 row-end-5 p-5 border-2 rounded-lg bg-slate-950 text-white hover:shadow-xl hover:shadow-white hover:scale-125 hover:duration-300 ease-in-out duration-25">
           ADS1
         </div>
-        <div className="col-start-3 col-end-8 row-start-1 row-end-3 p-5 bg-white rounded-lg">
+        <div className="col-start-3 col-end-8 row-start-1 row-end-3 p-5 border-2 rounded-lg bg-slate-950 text-white hover:shadow-xl hover:shadow-white hover:scale-125 hover:duration-300 ease-in-out duration-25">
           Python
         </div>
-        <div className="col-start-3 col-end-8 row-start-6 row-end-8 p-5 bg-white rounded-lg">
+        <div className="col-start-3 col-end-8 row-start-6 row-end-8 p-5 border-2 rounded-lg bg-slate-950 text-white hover:shadow-xl hover:shadow-white hover:scale-125 hover:duration-300 ease-in-out duration-25">
           CPP
         </div>
-        <div className="col-start-1 col-end-3 row-start-5 row-end-8 p-5 bg-white rounded-lg">
+        <div className="col-start-1 col-end-3 row-start-5 row-end-8 p-5 border-2 rounded-lg bg-slate-950 text-white hover:shadow-xl hover:shadow-white hover:scale-125 hover:duration-300 ease-in-out duration-25">
           Java
         </div>
-        <div className="col-start-6 col-end-8 row-start-3 row-end-6 p-5 bg-white rounded-lg">
+        <div className="col-start-6 col-end-8 row-start-3 row-end-6 p-5 border-2 rounded-lg bg-slate-950 text-white hover:shadow-xl hover:shadow-white hover:scale-125 hover:duration-300 ease-in-out duration-25">
           ADS2
         </div>
-        <div className="col-start-3 col-end-6 row-start-3 row-end-6 p-5 bg-white rounded-lg">
+        <div className="col-start-3 col-end-6 row-start-3 row-end-6 p-5 border-2 rounded-lg bg-slate-950 text-white hover:shadow-xl hover:shadow-white hover:scale-125 hover:duration-300 ease-in-out duration-25">
           Baccalaureate
         </div>
       </div>
