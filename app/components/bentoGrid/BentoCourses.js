@@ -82,17 +82,25 @@ const BentoCourses = () => {
   };
   return (
     <div className="flex flex-row items-center justify-center p-10 w-full bg-black">
-      <div className="grid grid-cols-5 col-auto w-2/3 bg-white">
-        <ImageComponent
-          title={courses.ads1.title}
-          description={courses.ads1.description}
-          courseLogo={courses.ads1.courseLogo}
-          bgColor={courses.ads1.bgColor}
-          textColor={courses.ads1.textColor}
-          dynamicHeight={courses.ads1.dynamicHeight}
-          dynamicWidth={courses.ads1.dynamicWidth}
-          link={courses.ads1.link}
-        />
+      <div className="grid grid-cols-7 grid-rows-8 w-4/5 gap-3 min-h-screen">
+        <div className="col-start-1 col-end-3 row-start-1 row-end-5 p-5 bg-white rounded-lg">
+          ADS1
+        </div>
+        <div className="col-start-3 col-end-8 row-start-1 row-end-3 p-5 bg-white rounded-lg">
+          Python
+        </div>
+        <div className="col-start-3 col-end-8 row-start-6 row-end-8 p-5 bg-white rounded-lg">
+          CPP
+        </div>
+        <div className="col-start-1 col-end-3 row-start-5 row-end-8 p-5 bg-white rounded-lg">
+          Java
+        </div>
+        <div className="col-start-6 col-end-8 row-start-3 row-end-6 p-5 bg-white rounded-lg">
+          ADS2
+        </div>
+        <div className="col-start-3 col-end-6 row-start-3 row-end-6 p-5 bg-white rounded-lg">
+          Baccalaureate
+        </div>
       </div>
     </div>
   );
