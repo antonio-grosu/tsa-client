@@ -81,8 +81,8 @@ const BentoCourses = () => {
     },
   };
   return (
-    <div className="flex flex-row items-center justify-center p-10 w-full bg-black">
-      <div className="grid grid-cols-7 grid-rows-8 w-4/5 gap-3 min-h-screen">
+    <div className="flex flex-row items-center justify-center py-48 w-full bg-black">
+      <div className="grid grid-cols-7 grid-rows-7 w-4/5 gap-3 min-h-screen">
         <div className="col-start-1 col-end-3 row-start-1 row-end-5 p-5 bg-white rounded-lg">
           ADS1
         </div>
