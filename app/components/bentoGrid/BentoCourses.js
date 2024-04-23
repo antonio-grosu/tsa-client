@@ -74,8 +74,8 @@ const BentoCourses = () => {
   const [styleBac, setStyleBac] = useState({ display: "none" });
 
   return (
-    <div className="flex flex-col items-center justify-center py-24 w-full bg-neutral-950 poppins">
-      <h1 className="text-5xl text-white font-semibold">Our courses</h1>
+    <div className="flex flex-col items-center justify-center p-48 w-full bg-neutral-950 poppins">
+      <h1 className="text-3xl text-white font-semibold">Our courses</h1>
       <div className="grid grid-cols-7 grid-rows-7 w-4/5 gap-10 min-h-screen mt-20">
         {/* Algorithm and Data Structures 1 bento grid element */}
         <div
@@ -93,7 +93,7 @@ const BentoCourses = () => {
         >
           <h1
             style={styleAds}
-            className="text-2xl p-5 bg-neutral-950 rounded-lg border-2 animate-bounce duration-700"
+            className="text-lg p-5 bg-neutral-950 rounded-lg border-2 animate-bounce duration-700"
           >
             Algorithms and Data Structures
           </h1>
@@ -114,7 +114,7 @@ const BentoCourses = () => {
         >
           <h1
             style={stylePython}
-            className="text-2xl p-5 bg-blue-950 rounded-lg border-2 animate-bounce duration-700"
+            className="text-lg p-5 bg-blue-950 rounded-lg border-2 animate-bounce duration-700"
           >
             Python
           </h1>
@@ -135,7 +135,7 @@ const BentoCourses = () => {
         >
           <h1
             style={styleCpp}
-            className="text-2xl p-5 bg-blue-950 rounded-lg border-2 animate-bounce duration-700"
+            className="text-lg p-5 bg-blue-950 rounded-lg border-2 animate-bounce duration-700"
           >
             C++
           </h1>
@@ -156,7 +156,7 @@ const BentoCourses = () => {
         >
           <h1
             style={styleJava}
-            className="text-2xl p-5 bg-orange-950 rounded-lg border-2 animate-bounce duration-700"
+            className="text-lg p-5 bg-orange-950 rounded-lg border-2 animate-bounce duration-700"
           >
             Java
           </h1>
@@ -177,7 +177,7 @@ const BentoCourses = () => {
         >
           <h1
             style={styleAds2}
-            className="text-2xl p-5 bg-neutral-950 rounded-lg border-2 animate-bounce duration-700"
+            className="text-lg p-5 bg-neutral-950 rounded-lg border-2 animate-bounce duration-700"
           >
             Advanced Algorithms and Data Structures
           </h1>
@@ -194,11 +194,11 @@ const BentoCourses = () => {
           onClick={() => {
             window.location.href = "/course/bac";
           }}
-          className="col-start-3 col-end-6 row-start-3 row-end-6 p-10 border-2 rounded-lg text-white hover:shadow-lg hover:shadow-lime-500 hover:scale-125 hover:duration-300 ease-out duration-25 justify-center items-center flex gap-10 bg-cover bg-start bg-neutral-950"
+          className="col-start-3 col-end-6 row-start-3 row-end-6 p-10 border-2 rounded-lg text-white hover:shadow-lg hover:shadow-lime-500 hover:scale-125 hover:duration-300 ease-out duration-25 justify-center items-center flex bg-bottom bg-cover bg-neutral-950"
         >
           <h1
             style={styleBac}
-            className="text-2xl p-5 bg-neutral-950 rounded-lg border-2 animate-bounce duration-700"
+            className="text-lg p-5 bg-neutral-950 rounded-lg border-2 animate-bounce duration-700 invisible"
           >
             Romanian Baccalaureate
           </h1>
