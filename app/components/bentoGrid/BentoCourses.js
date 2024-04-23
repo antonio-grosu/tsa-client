@@ -74,7 +74,7 @@ const BentoCourses = () => {
   const [styleBac, setStyleBac] = useState({ display: "none" });
 
   return (
-    <div className="flex flex-col items-center justify-center p-48 w-full bg-neutral-950 poppins">
+    <div className="flex flex-col items-center justify-center px-48 py-24 w-full bg-neutral-950 poppins">
       <h1 className="text-3xl text-white font-semibold">Our courses</h1>
       <div className="grid grid-cols-7 grid-rows-7 w-4/5 gap-10 min-h-screen mt-20">
         {/* Algorithm and Data Structures 1 bento grid element */}
