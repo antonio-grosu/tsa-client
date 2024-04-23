@@ -1,19 +1,4 @@
-// a bento grid component with the courses data
-// a bento grid is a grid where each cell has a different size
-// on scroll effect to load more data
-// on hover effect to show the course details
-// on click effect to navigate to the course details page
-// each course has only an image
-// on hover the course title and details are shown
-// on scroll effect to make the image move up and down
-// the tehnologies used are axios, next.js, react, tailwindcss
-// the data is fetched from a json file
-// this is a component that is used in the home page
-// it is a reusable component
-
 import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
 
 const BentoCourses = () => {
   /*const courses = {
@@ -89,9 +74,9 @@ const BentoCourses = () => {
   const [styleBac, setStyleBac] = useState({ display: "none" });
 
   return (
-    <div className="flex flex-col items-center justify-center py-48 w-full bg-neutral-950">
+    <div className="flex flex-col items-center justify-center py-24 w-full bg-neutral-950">
       <h1 className="text-5xl text-white font-semibold">Our courses</h1>
-      <div className="grid grid-cols-7 grid-rows-7 w-4/5 gap-5 min-h-screen mt-20">
+      <div className="grid grid-cols-7 grid-rows-7 w-4/5 gap-10 min-h-screen mt-20">
         {/* Algorithm and Data Structures 1 bento grid element */}
         <div
           style={{ backgroundImage: "url('/algo-logo.svg')" }}
