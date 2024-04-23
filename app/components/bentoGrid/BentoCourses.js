@@ -81,18 +81,25 @@ const BentoCourses = () => {
     },
   };*/
 
-  const [style, setStyle] = useState({ display: "none" });
+  const [styleAds, setStyleAds] = useState({ display: "none" });
+  const [styleCpp, setStyleCpp] = useState({ display: "none" });
+  const [styleJava, setStyleJava] = useState({ display: "none" });
+  const [stylePython, setStylePython] = useState({ display: "none" });
+  const [styleAds2, setStyleAds2] = useState({ display: "none" });
+  const [styleBac, setStyleBac] = useState({ display: "none" });
 
   return (
-    <div className="flex flex-row items-center justify-center py-48 w-full bg-black">
-      <div className="grid grid-cols-7 grid-rows-7 w-4/5 gap-5 min-h-screen">
+    <div className="flex flex-col items-center justify-center py-48 w-full bg-black">
+      <h1 className="text-5xl text-white font-semibold">Our courses</h1>
+      <div className="grid grid-cols-7 grid-rows-7 w-4/5 gap-5 min-h-screen mt-20">
         {/* Algorithm and Data Structures 1 bento grid element */}
         <div
+          style={{ backgroundImage: "url('/algo-logo.svg')" }}
           onMouseEnter={(e) => {
-            setStyle({ display: "block" });
+            setStyleAds({ display: "block" });
           }}
           onMouseLeave={(e) => {
-            setStyle({ display: "none" });
+            setStyleAds({ display: "none" });
           }}
           onClick={() => {
             window.location.href = "/course/ads1";
@@ -100,69 +107,114 @@ const BentoCourses = () => {
           className="col-start-1 col-end-3 row-start-1 row-end-5 p-10 border-2 rounded-lg text-white hover:shadow-lg hover:shadow-lime-500 hover:scale-125 hover:duration-300 ease-out duration-25 justify-center items-center flex bg-cover bg-center bg-neutral-950"
         >
           <h1
-            style={{ backgroundImage: "url('/algo-logo.svg')", style }}
-            className="text-3xl p-5 bg-neutral-950 rounded-lg border-2"
+            style={styleAds}
+            className="text-2xl p-5 bg-neutral-950 rounded-lg border-2 animate-bounce duration-700"
           >
             Algorithms and Data Structures
           </h1>
         </div>
         {/* Python bento grid element */}
         <div
+          onMouseEnter={(e) => {
+            setStylePython({ display: "block" });
+          }}
+          onMouseLeave={(e) => {
+            setStylePython({ display: "none" });
+          }}
           onClick={() => {
             window.location.href = "/course/python";
           }}
           style={{ backgroundImage: "url('/python-logo.svg')" }}
           className="col-start-3 col-end-8 row-start-1 row-end-3 p-10 border-2 rounded-lg text-white hover:shadow-lg hover:shadow-lime-500 hover:scale-125 hover:duration-300 ease-out duration-25 justify-center items-center flex bg-cover bg-center bg-neutral-950"
         >
-          <h1 className="text-3xl p-5 bg-neutral-950 rounded-lg border-2">
+          <h1
+            style={stylePython}
+            className="text-2xl p-5 bg-blue-950 rounded-lg border-2 animate-bounce duration-700"
+          >
             Python
           </h1>
         </div>
         {/* C++ bento grid element */}
         <div
+          onMouseEnter={(e) => {
+            setStyleCpp({ display: "block" });
+          }}
+          onMouseLeave={(e) => {
+            setStyleCpp({ display: "none" });
+          }}
           style={{ backgroundImage: "url('/cpp-logo.svg')" }}
           onClick={() => {
             window.location.href = "/course/cplusplus";
           }}
           className="col-start-3 col-end-8 row-start-6 row-end-8 p-10 border-2 rounded-lg text-white hover:shadow-lg hover:shadow-lime-500 hover:scale-125 hover:duration-300 ease-out duration-25 justify-center items-center flex bg-cover bg-center bg-neutral-950"
         >
-          <h1 className="text-3xl p-5 bg-neutral-950 rounded-lg border-2">
+          <h1
+            style={styleCpp}
+            className="text-2xl p-5 bg-blue-950 rounded-lg border-2 animate-bounce duration-700"
+          >
             C++
           </h1>
         </div>
         {/* Java bento grid element */}
         <div
+          onMouseEnter={(e) => {
+            setStyleJava({ display: "block" });
+          }}
+          onMouseLeave={(e) => {
+            setStyleJava({ display: "none" });
+          }}
           style={{ backgroundImage: "url('/java-logo.svg')" }}
           onClick={() => {
             window.location.href = "/course/java";
           }}
           className="col-start-1 col-end-3 row-start-5 row-end-8 p-10 border-2 rounded-lg text-white hover:shadow-lg hover:shadow-lime-500 hover:scale-125 hover:duration-300 ease-out duration-25 justify-center items-center flex bg-cover bg-center bg-neutral-950"
         >
-          <h1 className="text-3xl p-5 bg-neutral-950 rounded-lg border-2">
+          <h1
+            style={styleJava}
+            className="text-2xl p-5 bg-orange-950 rounded-lg border-2 animate-bounce duration-700"
+          >
             Java
           </h1>
         </div>
         {/* Algorithm and Data Structures 2 bento grid element */}
         <div
+          onMouseEnter={(e) => {
+            setStyleAds2({ display: "block" });
+          }}
+          onMouseLeave={(e) => {
+            setStyleAds2({ display: "none" });
+          }}
           style={{ backgroundImage: "url('/ads-logo.svg')" }}
           onClick={() => {
             window.location.href = "/course/ads2";
           }}
           className="col-start-6 col-end-8 row-start-3 row-end-6 p-10 border-2 rounded-lg text-white hover:shadow-lg hover:shadow-lime-500 hover:scale-125 hover:duration-300 ease-out duration-25 justify-center items-center flex bg-cover bg-top bg-neutral-950"
         >
-          <h1 className="text-3xl p-5 bg-neutral-950 rounded-lg border-2">
+          <h1
+            style={styleAds2}
+            className="text-2xl p-5 bg-neutral-950 rounded-lg border-2 animate-bounce duration-700"
+          >
             Advanced Algorithms and Data Structures
           </h1>
         </div>
         {/* Baccalaureate bento grid element */}
         <div
+          onMouseEnter={(e) => {
+            setStyleBac({ display: "block" });
+          }}
+          onMouseLeave={(e) => {
+            setStyleBac({ display: "none" });
+          }}
           style={{ backgroundImage: "url('/bac.svg')" }}
           onClick={() => {
             window.location.href = "/course/bac";
           }}
           className="col-start-3 col-end-6 row-start-3 row-end-6 p-10 border-2 rounded-lg text-white hover:shadow-lg hover:shadow-lime-500 hover:scale-125 hover:duration-300 ease-out duration-25 justify-center items-center flex gap-10 bg-cover bg-start bg-neutral-950"
         >
-          <h1 className="text-3xl p-5 bg-neutral-950 rounded-lg border-2">
+          <h1
+            style={styleBac}
+            className="text-2xl p-5 bg-neutral-950 rounded-lg border-2 animate-bounce duration-700"
+          >
             Romanian Baccalaureate
           </h1>
         </div>
