@@ -3,7 +3,7 @@ import Highlight from "../../Highlight";
 import Link from "next/link";
 import TypeLesson from "../../TypeLesson";
 
-function Bac2() {
+function Bac3() {
   return (
     // <div className="w-full mx-auto bg-neutral-950 py-36  min-h-screen px-8">
     //   <h1 className="slide-in underline underline-offset-4 text-4xl text-lime-300 font-bold text-center poppins">
@@ -76,9 +76,9 @@ function Bac2() {
           type: 1,
 
           content: [
-            "Hmmm... Alt termen greu",
-            "Hmm... Alt termen greu, dar de fapt extrem de simplu. Hai să ne aducem aminte de clasa a II-a, când am avut un exercițiu de genul:       ",
-            "Scrieți toate numerele de 3 cifre distincte care se pot forma cu cifrele 2, 3 și 4.            ",
+            "Ce poate fi asta?",
+            "Hmm... suna ciudat, nu? Promit, este extrem de simplu. Ia-ti o foaie de hartie si un creion sau deschide un note si hai să ne aducem aminte de clasa a II-a, când am avut un exercițiu de genul:",
+            "Scrieți toate numerele de 3 cifre distincte care se pot forma cu cifrele 2, 3 și 4. Te invit să încerci și tu inainte să continui.",
           ],
         },
         {
@@ -86,28 +86,41 @@ function Bac2() {
           type: 1,
 
           content: [
-            "Păi simplu: 234, 243, 324, 342, 423, 432.",
-            "Hmm... sunt crescătoare.            ",
-            `Acum, din nou, dar cu alte reguli...            `,
+            "Raspuns: 234, 243, 324, 342, 423, 432.",
+            "Dupa cum se poate observa, numerele sunt scrise in ordine crescatoare.",
+            "Daca ne luam dupa definitie: Backtracking-ul este un algoritm de tipul încercare și eroare, care încearcă să găsească soluții la problemele combinatorice.",
           ],
         },
         {
           key: 2,
           type: 1,
           content: [
-            "Scrieți toate numerele de 5 cifre distincte care se pot forma cu cifrele 2, 3, 4, 5 și 6, dar în care nu putem așeza cifrele pare una lângă alta.",
-            " Variante corecte : 23456,23654",
-            "Dar nu : 23645, 23546, 23564",
+            "Sau pe scurt",
+            "Continuăm să încercăm variante până găsim una care funcționează. Dacă te blochezi, te întorci în urmă și încerci altă cale. In cazul nostru, daca as fi scris toate numerele de 3 cifre formate din 2, 3 si 4 as fi scris: ",
+            "222, 223, 224, 232, 233, 234, 242, 243, 244, 322, 323, 324, 332, 333, 334, 342, 343, 344, 422, 423, 424, 432, 433, 434, 442, 443, 444. Eliminand cele care nu au toate cifrele distincte, am ajuns la 234, 243, 324, 342, 423, 432.",
           ],
         },
         {
           key: 3,
-          type: 5,
-          def: false,
+          type: 1,
           content: [
-            `Răspunsul final`,
-            "23456, 23654, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 63452, 65234 și 65432",
-            ,
+            "Hai sa mai facem un exercitiu",
+            "Scrieți toate numerele de 5 cifre distincte care se pot forma cu cifrele 2, 3, 4, 5 și 6, dar în care nu putem așeza cifrele pare una lângă alta.",
+            "Primele 10 numere generate sunt, in ordine crescatoare: 23456, 23465, 23546, 23564, 23645, 23654, 24356, 24365, 24536, 24563. Dar nu putem avea cifre pare una langa alta, asa ca eliminam 23465, 23546, 23564, 23645, 24356, 24365, 24536, 24563 din lista. Te rugam, incearca sa continui singur inainte sa te duci mai departe.",
+          ],
+        },
+        {
+          key: 3,
+          type: 4,
+          content: [
+            "Răspunsul final este:",
+            "a. 23456, 23654, 25436, 25436, 25634, 43265, 43652, 45236, 45632, 63254, 63452, 65243, 65432.",
+            "b. 23654, 23456, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 63452, 65234, 65432.",
+            "c. 23456, 23654, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 63452, 65234, 65432.",
+            "d. 23456, 23654, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 65234, 63452, 65432.",
+            "Nu uita, in backtracking, numerele sunt fie in ordine crescatoare ori descrescatoare si trebuie sa respecte conditiile impuse.",
+            "Corect. Acestea sunt toate numerele disticte scrise in ordine crescatoare.",
+            "c. 23456, 23654, 25436, 25436, 25634, 43256, 43652, 45236, 45632, 63254, 63452, 65234, 65432.",
           ],
         },
         {
@@ -130,11 +143,43 @@ function Bac2() {
         },
         {
           key: 6,
-          type: 5,
-          def: false,
+          type: 1,
           content: [
             "Din nou... simplu, nu?            ",
-            "132, 134, 142, 143, 231, 234, 241, 243, 314, 324, 341, 342, 413, 423, 431, 432.            ",
+            "123, 132, 134, 143, 213, 214, 231, 234, 312, 314, 321, 341, 412, 413, 431, 432.            ",
+            "In traducere: (trandafir, lalea, azalee), (trandafir, azalee, lalea), (trandafir, azalee, orhidee), (trandafir, orhidee, azalee), (lalea, trandafir, azalee), (lalea, trandafir, orhidee), (lalea, azalee, trandafir), (lalea, azalee, orhidee), (azalee, trandafir, lalea), (azalee, trandafir, orhidee), (azalee, lalea, trandafir), (orhidee, trandafir, lalea), (orhidee, trandafir, azalee).            ",
+          ],
+        },
+        {
+          key: 7,
+          type: 1,
+          content: [
+            "Asta a fost tot pentru astazi.",
+            "V-am mai lasat un exercitiu de tipul celor de mai sus.",
+            "Te rugam sa il rezolvi inainte de a trece la urmatoarea lectie.",
+          ],
+        },
+        {
+          key: 8,
+          type: 4,
+          content: [
+            "Am 4 bile: una alba, una neagra, una rosie si una albastra. Daca nu putem avea bila alba langa bila albastra, cate siruri de 3 bile putem face?",
+            "a. 16",
+            "b. 10",
+            "c. 12",
+            "d. 6",
+            "Nu uita, scrie toate variantele pe o foaie de hartie si analizeaza-le pas cu pas. Primele 3 solutii sunt: (alb, negru, rosu), (alb, negru, albastru), (alb, rosu, negru).",
+            "Corect. Ordinea este: (alb, negru, rosu), (alb, negru, albastru), (alb, rosu, negru), (alb, rosu, albastru), (negru, alb, rosu), (negru, rosu, alb), (negru, rosu, albastru), (negru, albastru, rosu), (rosu, alb, negru), (rosu, negru, alb), (rosu, negru, albastru), (rosu, albastru, negru), (albastru, negru, alb), (albastru, negru, rosu), (albastru, rosu, alb), (albastru, rosu, negru).",
+            "a. 16",
+          ],
+        },
+        {
+          key: 9,
+          type: 6,
+          content: [
+            "Acesta este tiparul problemelor pe care il poti intalni la bacalaureat cu backtracking",
+            "Mai departe te sfatuim sa continui sa exersezi si sa iti testezi cunostintele cu exercitii de tipul celor de mai sus.",
+            "Daca ceva nu este clar, nu uita sa scrii toate exemplele pe o foaie de hartie si sa le analizezi pas cu pas. Este important sa intelegi cum se ajunge la rezultatul final. Mult succes!",
           ],
         },
       ]}
@@ -142,4 +187,4 @@ function Bac2() {
   );
 }
 
-export default Bac2;
+export default Bac3;

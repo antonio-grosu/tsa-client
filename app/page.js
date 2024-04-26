@@ -352,7 +352,7 @@ const Home = () => {
       <Hero />
       <Product />
       {/* <Presentation /> */}
-      {/* <BentoCourses /> */}
+      <BentoCourses />
     </>
   );
 };

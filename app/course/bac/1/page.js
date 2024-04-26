@@ -6,7 +6,7 @@ import TypeLesson from "../../TypeLesson";
 
 // lectie terminata
 
-function Bac0() {
+function Bac1() {
   return (
     <TypeLesson
       title="Introducere"
@@ -56,4 +56,4 @@ function Bac0() {
   );
 }
 
-export default Bac0;
+export default Bac1;

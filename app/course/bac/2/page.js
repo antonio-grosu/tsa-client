@@ -6,7 +6,7 @@ import Exercise from "../../Exercise";
 import { useEffect, useState } from "react";
 import TypeLesson from "../../TypeLesson";
 
-function Bac1() {
+function Bac2() {
   return (
     <TypeLesson
       title="Aritmetică și Operatori Logici"
@@ -111,7 +111,7 @@ function Bac1() {
             "b. 0 (Fals)",
             "c. -1 (Eroare)",
             "d. 2 (Eroare)",
-            "In limbajul C/C++, 1 reprezinta adevarat, iar 0 reprezinta fals. Cand folosim operatorul ||, doar unul dintre valori trebuie sa fie adevarat pentru ca rezultatul sa fie adevarat.",
+            "In limbajul C/C++, 1 reprezinta adevarat, iar 0 reprezinta fals. Cand folosim operatorul ||, doar unul dintre valori trebuie sa fie adevarata pentru ca rezultatul sa fie adevarat.",
             "Corect. Adevarat || fals este adevarat.",
             "a. 1 (Adevarat)",
           ],
@@ -136,7 +136,7 @@ function Bac1() {
           content: [
             "Concluzie",
             "In aceasta lectie am invatat despre operatorii de comparatie si operatorii logici. Operatorii de comparatie sunt folositi pentru a compara doua valori, iar operatorii logici sunt folositi pentru a face comparatii intre valori de adevar.",
-            "In continuare, vom lucra mai mult partea teoretica in cursuri, iar exercitiile pentru fixarea cunostintelor le veti gasi in sectiunea respectiva.",
+            "Pana la urmatorul curs, va asteptam sa rezolvati exercitiile de fixare a cunostintelor.",
           ],
         },
       ]}
@@ -144,4 +144,4 @@ function Bac1() {
   );
 }
 
-export default Bac1;
+export default Bac2;
