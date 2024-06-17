@@ -351,8 +351,8 @@ const Home = () => {
     <>
       <Hero />
       <Product />
-      {/* <Presentation /> */}
-      <BentoCourses />
+      <Presentation />
+      {/* <BentoCourses /> */}
     </>
   );
 };

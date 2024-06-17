@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import * as yup from "yup";
+import Image from "next/image";
 
 const schema = yup.object().shape({
   email: yup.string().required(),
@@ -42,7 +43,16 @@ const Login = () => {
   };
   return (
     <div className="py-28 px-8 md:px-24 lg:px-36 xl:px-48 2xl:px-72 min-h-screen bg-neutral-950 text-lime-300 p-4  flex flex-col justify-center items-center">
-      <form
+      <h1 className="text-4xl poppins slide-in">
+        The Software Academy Inapoi Curand!
+      </h1>
+      <Image
+        src="/coding.svg"
+        width={0}
+        height={0}
+        className="w-1/3 slide-in"
+      />
+      {/* <form
         onSubmit={handleSubmit}
         className="bg-gray-500/10 p-8 rounded-md w-full md:w-1/2 mx-auto"
       >
@@ -92,7 +102,7 @@ const Login = () => {
             Sign In
           </button>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 };
