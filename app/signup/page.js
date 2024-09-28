@@ -50,16 +50,7 @@ const Signup = () => {
 
   return (
     <div className="py-28 px-8 md:px-24 lg:px-36 xl:px-48 2xl:px-72 bg-neutral-950 text-lime-300 p-4 min-h-screen flex flex-col justify-center items-center">
-      <h1 className="text-4xl poppins slide-in">
-        The Software Academy Inapoi Curand!
-      </h1>
-      <Image
-        src="/coding.svg"
-        width={0}
-        height={0}
-        className="w-1/3 slide-in"
-      />
-      {/* <form
+      <form
         onSubmit={handleSubmit}
         className=" bg-neutral-500/10 poppins  rounded-md p-8 w-full md:w-1/2 mx-auto text-lime-300 flex flex-col justify-center items-center"
       >
@@ -190,7 +181,7 @@ const Signup = () => {
         >
           Register
         </button>
-      </form> */}
+      </form>
     </div>
   );
 };

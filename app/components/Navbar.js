@@ -58,14 +58,14 @@ function Navbar() {
                 <Link
                   href="/login"
                   onClick={scrollToTop}
-                  className="px-6 py-2 hover:bg-gray-200 transition-all bg-white text-gray-950 text-sm font-bold rounded-sm"
+                  className="px-6 py-2 hover:bg-gray-200 transition-all bg-white text-gray-950 text-sm  rounded-sm"
                 >
                   Logare
                 </Link>
                 <Link
                   href="/signup"
                   onClick={scrollToTop}
-                  className="px-6 py-2 ml-4 bg-lime-300 hover:bg-lime-500 transition-all text-gray-950 text-sm font-bold rounded-sm"
+                  className="px-6 py-2 ml-4 bg-lime-300 hover:bg-lime-500 transition-all text-gray-950 text-sm  rounded-sm"
                 >
                   Creează Cont
                 </Link>

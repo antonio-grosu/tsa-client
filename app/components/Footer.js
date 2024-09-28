@@ -13,35 +13,32 @@ function Footer() {
                 className="w-full mb-4 inline-block bg-neutral-950 px-2 py-1 rounded-md mr-2"
               />
             </div>
-            {/* <span className="font-semibold text-xl tracking-tight poppins">ScienceIT</span> */}
-            <p className="poppins text-sm  mt-2 ">
-              © Copyright ScienceIT 2024
-              <br />
-              All rights reserved <br />
-            </p>
+            <span className="font-semibold text-xl tracking-tight poppins">
+              The Software Academy
+            </span>
           </div>
           <div className="flex flex-col gap-4 md:items-center">
-            <h3 className=" poppins font-bold text-lg">Navigation</h3>
+            <h3 className=" poppins font-bold text-lg">Navigatie</h3>
             <Link
               href="/"
               className="hover:text-lime-500 transition-all text-sm poppins "
             >
               {" "}
-              Home
+              Acasa
             </Link>
             <Link
               href="/courses"
               className="hover:text-lime-500 transition-all text-sm poppins "
             >
               {" "}
-              Courses
+              Cursuri
             </Link>
             <Link
               href="/profile"
               className="hover:text-lime-500 transition-all text-sm poppins "
             >
               {" "}
-              My profile
+              Profilul Meu
             </Link>
           </div>
           <div className="flex flex-col gap-4 md:items-center">
@@ -51,14 +48,21 @@ function Footer() {
               className="hover:text-lime-500 transition-all text-sm poppins "
             >
               {" "}
-              Instagram Softeneers
+              Instagram
             </Link>
             <Link
               href="https://www.instagram.com/codevs.ro/"
               className="hover:text-lime-500 transition-all text-sm poppins "
             >
               {" "}
-              Instagram Codevs
+              Facebook
+            </Link>
+            <Link
+              href="https://www.instagram.com/codevs.ro/"
+              className="hover:text-lime-500 transition-all text-sm poppins "
+            >
+              {" "}
+              Tiktok
             </Link>
           </div>
 
@@ -74,22 +78,15 @@ function Footer() {
           </div>
         </div>
 
-        <p className=" mt-6 poppins font-semibold  w-full text-center text-gray-950/50 ">
+        <p className=" mt-12 poppins text-sm hover:cursor-pointer p-4    text-center  ">
           {" "}
           Powered by{" "}
           <Link
-            className="text-orange-400 underline underline-offset-2 hover:text-orange-600 font-bold"
-            href="https://softeneers.com/"
+            className="text-teal-400  font-bold"
+            href="https://blooming-solutions.ro/"
           >
-            softeneers
+            Blooming Solutions
           </Link>{" "}
-          |{" "}
-          <Link
-            className="text-purple-500 underline underline-offset-2 hover:text-purple-700 font-bold"
-            href="https://codevs.ro/"
-          >
-            codevs
-          </Link>
         </p>
       </footer>
     </div>
